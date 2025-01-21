@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/essayist/public/essayist.svg"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essayist App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <header class="page-header">
+      <div class="header-container container">
+        <a href="./index.html" class="header-logo" alt="Logo company">
+            <img class="svg-logo" src="./src/img/logo.svg">
+            </img>
+          </a>
+        <nav class="nav">
+          
+          <ul class="nav-list list">
+            <li class="nav-list-item">
+              <a href="#how_it_works" class="nav-link current link"
+                >How it Works</a
+              >
+            </li>
+            <li class="nav-list-item">
+              <a href="#features" class="nav-link link">Features</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#pricing" class="nav-link link">Pricing</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#faq" class="nav-link link">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn-download-app" type="button">Get App</button>
+        <button class="mobile-menu-open-btn" id="burger" type="button">
+          <svg
+            class="mobile-menu-open-btn-icon"
+            aria-label="mobile menu open icon"
+          >
+            <use href="./src/symbol-defs.svg#menu-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-------------MOBAIL_MENU----------->
+
+    <div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-content">
+    <div class="mobile-container">
+      <a href="./index.html" class="header-logo mobile-menu-logo" alt="Logo company">
+            <img class="svg-logo" src="./src/img/logo.svg">
+            </img>
+          </a>
+    <button class="mobile-menu-close-btn" id="mobile-close-btn" type="button" aria-label="closed">
+    <svg
+        class="icon-closed"
+        aria-label="close modal icon"
+      >
+       <use xlink:href="./src/symbol-defs.svg#closed-icon"></use>
+      </svg>
+    </button>
+    </div>
+    
+      
+
+    <nav class="mobile-menu-navigation">
+      <ul class="mobile-list">
+        <li class="mobile-menu-item menu-link-add-color list">
+          <a class="menu-link-mobile" href="#how_it_works">How it Works</a>
+        </li>
+        <li class="mobile-menu-item menu-link-add-color list">
+          <a class="menu-link-mobile" href="#features">Features</a>
+        </li>
+        <li class="mobile-menu-item menu-link-add-color list">
+          <a class="menu-link-mobile" href="#pricing">Pricing</a>
+        </li>
+        <li class="mobile-menu-item menu-link-add-color list">
+          <a class="menu-link-mobile" href="#faq">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="btn-download-app-mobile" type="button">Get App</button>
+  </div>
+</div>
+   
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
