@@ -13,5 +13,3 @@ mobileMenuCloseBtn.addEventListener("click", () => {
   mobileMenu.classList.remove("is-open");
   document.body.style.overflow = "auto";
 });
-
-console.log("Yana");
