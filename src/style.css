@@ -289,16 +289,20 @@ input {
 .mobile-list {
   font-size: 36px;
   font-weight: 700;
-  line-height: 1.2;
-  /* text-decoration-skip-ink: none;
-  color: var(--main-text); */
-  /* padding: 10px; */
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  line-height: 120%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 48px;
+}
+
+.menu-link-mobile {
+  color: #141f37;
 }
 
 .mobile-menu-navigation {
