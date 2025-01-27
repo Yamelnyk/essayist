@@ -844,11 +844,6 @@ input {
     padding: 5% 5%;
   }
 
-  /* .works-block-text-wrapper {
-    max-width: 270px;
-    margin-left: auto;
-    margin-right: auto;
-  } */
   .works-block-wrapper-violet {
     flex-direction: row-reverse;
   }
@@ -856,18 +851,9 @@ input {
   .works-block-violet {
     padding: 5% 5%;
   }
-
-  .works-block-img-references,
-  .works-block-img-library {
-    /* max-width: 300px; */
-  }
 }
 
 @media screen and (min-width: 980px) {
-  .works-block-img-references,
-  .works-block-img-library {
-    /* max-width: 370px; */
-  }
   .works-block-text-wrapper {
     max-width: 370px;
   }
