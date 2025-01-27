@@ -661,9 +661,12 @@ input {
 .works-arrow-first {
   position: absolute;
   top: 23.8rem;
-  left: 1.3rem;
+  left: -17.5rem;
+  right: 0;
   width: 3rem;
   height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .works-arrow-second {
@@ -671,7 +674,24 @@ input {
   width: 5rem;
   height: 5rem;
   top: 63%;
-  right: 0;
+  right: -18rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .works-list {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .works-title-text {
+    font-size: 24px;
+  }
+  .text {
+    font-size: 17px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -694,25 +714,25 @@ input {
 
   .works-list {
     max-width: 1070px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     flex-direction: row;
     gap: 92px;
   }
 
   .works-arrow-first {
-    top: 22rem;
-    left: 29%;
-    width: 5rem;
-    height: 5rem;
+    top: 23.5rem;
+    left: -21rem;
+    width: 4rem;
+    height: 4rem;
     transform: rotate(-45deg);
   }
 
   .works-arrow-second {
-    width: 7rem;
-    height: 7rem;
-    top: 49%;
-    right: 28%;
+    top: 46%;
+    right: -20rem;
+    width: 6rem;
+    height: 6rem;
     transform: rotate(-140deg);
   }
 }
@@ -811,7 +831,7 @@ input {
   width: 18%;
   height: 18%;
   right: 21%;
-  bottom: -6%;
+  bottom: -7%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -863,5 +883,50 @@ input {
   .works-block-img-references,
   .works-block-img-library {
     max-width: 494px;
+  }
+}
+
+/*=================CITATIONS===================*/
+
+.citations-section-container {
+  padding: 64px 16px 93px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #007aff 0%, #4575ee 100%);
+  box-shadow: 4px 4px 20px 0px rgba(2, 11, 22, 0.2) inset;
+}
+
+.citations-section-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 739px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+
+.citations-title {
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.citations-video {
+  border-radius: 14px;
+  border: 13px solid #fff;
+  /* background: lightgray 0px -0.252px / 100% 100.243% no-repeat; */
+  box-shadow: 4px 4px 16px 0px rgba(2, 11, 22, 0.12);
+}
+
+.citations-text {
+  text-align: center;
+  line-height: 150%;
+  margin-bottom: 54px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .citations-section-container {
+    padding: 120px 40px;
   }
 }
