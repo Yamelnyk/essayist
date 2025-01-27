@@ -15,156 +15,378 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.cdnfonts.com/css/bradley-hand-2"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <!-- HEADER -->
+    <div class="container">
+      <!-- HEADER -->
 
-    <header class="page-header">
-      <div class="header-container container">
-        <a href="./index.html" class="header-logo" alt="Logo company">
-            <img class="svg-logo" src="./src/img/svg/logo.svg">
-            </img>
+      <header class="page-header">
+        <div class="header-container">
+          <a href="./index.html" class="header-logo">
+            <img
+              class="svg-logo"
+              src="./src/img/svg/logo.svg"
+              alt="Logo company"
+            />
           </a>
-        <nav class="nav">
-          
-          <ul class="nav-list list">
-            <li class="nav-list-item">
-              <a href="#how_it_works" class="nav-link current link"
-                >How it Works</a
-              >
+          <nav class="nav">
+            <ul class="nav-list list">
+              <li class="nav-list-item">
+                <a href="#how_it_works" class="nav-link current link"
+                  >How it Works</a
+                >
+              </li>
+              <li class="nav-list-item">
+                <a href="#features" class="nav-link link">Features</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#pricing" class="nav-link link">Pricing</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#faq" class="nav-link link">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="btn-download-app" type="button">Get App</button>
+          <button class="mobile-menu-open-btn" id="burger" type="button">
+            <svg
+              class="mobile-menu-open-btn-icon"
+              aria-label="mobile menu open icon"
+            >
+              <use href="./src/symbol-defs.svg#menu-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!----------INTRODUCTION-------------->
+      <section class="introduction-section section">
+        <div class="introduction-section-container">
+          <div class="introduction-section-container-wrapper">
+            <h1 class="page-title">
+              <span class="page-title-span">The</span> Way to Write Essays
+            </h1>
+            <h2 class="introduction-section-title">
+              The Academic Writing App for Students, Scholars & Professionals
+            </h2>
+            <div class="introduction-tab-list-wrapper">
+              <ul class="introduction-tab-list list">
+                <li class="introduction-tab-list-item">
+                  <button class="introduction-item-btn">
+                    <svg width="24" height="24">
+                      <use href="./src/symbol-defs.svg#icon-mac"></use>
+                    </svg>
+                    Mac
+                  </button>
+                </li>
+                <li class="introduction-item">
+                  <button class="introduction-item-btn btn-iPhone">
+                    <svg width="24" height="24">
+                      <use href="./src/symbol-defs.svg#icon-iPhone"></use>
+                    </svg>
+                    iPhone
+                  </button>
+                </li>
+                <li class="introduction-item">
+                  <button class="introduction-item-btn">
+                    <svg width="24" height="24">
+                      <use href="./src/symbol-defs.svg#icon-iPad"></use>
+                    </svg>
+                    iPad
+                  </button>
+                </li>
+              </ul>
+              <a href="./index.html" class="download-on-app-store-desk">
+                <img
+                  class="svg-app-store"
+                  src="./src/img/svg/app_store.svg"
+                  alt="Download on the App Store"
+                />
+              </a>
+            </div>
+
+            <picture>
+              <source
+                srcset="
+                  ./src/img/introduction/image-mac-desk.png    1x,
+                  ./src/img/introduction/image-mac-desk@2x.png 2x
+                "
+                media="(min-width: 1024px)"
+              />
+              <source
+                srcset="
+                  ./src/img/introduction/image-mac-mob.png    1x,
+                  ./src/img/introduction/image-mac-mob@2x.png 2x
+                "
+                media="(max-width: 1023px)"
+              />
+
+              <img
+                class="introduction-mac-img"
+                src="./src/img/introduction/image-mac-mob@2x.png"
+                alt="example essay"
+              />
+            </picture>
+          </div>
+
+          <ul class="introduction-awards-list list">
+            <li class="awards-list-item">
+              <img
+                class="awards-branch"
+                src="./src/img/svg/branch-left.svg"
+                alt="branch"
+              />
+              <div class="awards-item-wrapper">
+                <p class="awards-name">Editors’ Choice</p>
+                <p>Apple</p>
+              </div>
+
+              <img
+                class="awards-branch"
+                src="./src/img/svg/branch-right.svg"
+                alt="branch"
+              />
             </li>
-            <li class="nav-list-item">
-              <a href="#features" class="nav-link link">Features</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#pricing" class="nav-link link">Pricing</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#faq" class="nav-link link">FAQ</a>
+            <li class="awards-list-item awards-list-item-app">
+              <img
+                class="awards-branch"
+                src="./src/img/svg/branch-left.svg"
+                alt="branch"
+              />
+              <div class="awards-item-wrapper">
+                <p class="awards-name">App of the Day</p>
+                <p>Apple</p>
+              </div>
+
+              <img
+                class="awards-branch"
+                src="./src/img/svg/branch-right.svg"
+                alt="branch"
+              />
             </li>
           </ul>
-        </nav>
-        <button class="btn-download-app" type="button">Get App</button>
-        <button class="mobile-menu-open-btn" id="burger" type="button">
-          <svg
-            class="mobile-menu-open-btn-icon"
-            aria-label="mobile menu open icon"
-          >
-            <use href="./src/symbol-defs.svg#menu-icon"></use>
-          </svg>
-        </button>
-      </div>
-    </header>
-
-    <!----------INTRODUCTION-------------->
-    <section class="introduction-section section">
-      <div class="introduction-section-container container">
-        <p><span>The</span> Way to Write Essays</p>
-        <h1 class="page-title">The Academic Writing App for Students, Scholars & Professionals</h1>
-        <ul class="introduction-list list">
-          <li class="introduction-item"><button>
-            <svg width="24" height="24">
-              <use href="./src/symbol-defs.svg#icon-mac"></use>
-            </svg>
-            <p>Mac</p>
-          </button></li>
-          <li class="introduction-item"><button>
-            <svg width="24" height="24">
-              <use href="./src/symbol-defs.svg#icon-iPhone"></use>
-            </svg>
-          <p>iPhone</p>
-        </button></li>
-          <li class="introduction-item"><button>
-            <svg width="24" height="24">
-            <use href="./src/symbol-defs.svg#icon-iPad"></use>
-          </svg>
-          <p>iPad</p>
-        </button>
-      </li>
-        </ul>
-
-         <picture>
-      <source
-        srcset="./src/img/introduction/image-mac-desk.png 1x,
-        ./src/img/introduction/image-mac-desk@2x.png 2x"
-        media="(min-width: 1024px)"
-      />
-      <source
-        srcset="./src/img/introduction/image-mac-mob.png 1x,
-        ./src/img/introduction/image-mac-mob@2x.png 2x"
-        media="(max-width: 1023px)"
-      />
-   
-      <img
-        class="introduction-mac-img"
-        src="./src/img/introduction/image-mac-mob@2x.png"
-        alt="example essay"
-      />
-    </picture>
-    <ul class="introduction-awards-list list">
-      <li class="awards-list-item">
-        <img src="./src/img/svg/branch-left.svg">
-        <p>Editors’ Choice</p>
-        <p>Apple</p>
-        <img src="./src/img/svg/branch-right.svg">
-      </li>
-      <li class="awards-list-item">
-        <img src="./src/img/svg/branch-left.svg">
-        <p>App of the Day</p>
-        <p>Apple</p>
-        <img src="./src/img/svg/branch-right.svg">
-      </li>
-    </ul>
-        <a href="./index.html" class="download-on-app-store" >
-            <img class="svg-app-store" src="./src/img/svg/app_store.svg" alt="Download on the App Store">
-            </img>
+          <a href="./index.html" class="download-on-app-store">
+            <img
+              class="svg-app-store"
+              src="./src/img/svg/app_store.svg"
+              alt="Download on the App Store"
+            />
           </a>
+        </div>
+      </section>
 
-
-      </div>
-    </section>
-
+      <!-----------How It Works ----------------->
+      <section class="works-section section">
+        <div class="works-section-container">
+          <h2 class="works-title section-title">How It Works</h2>
+          <ul class="works-list list">
+            <li class="works-list-item">
+              <div class="works-icon">
+                <svg width="32" height="32">
+                  <use
+                    href="./src/symbol-defs.svg#icon-how_it_works_list"
+                  ></use>
+                </svg>
+              </div>
+              <h4 class="works-title-text">Choose Citation Style</h4>
+              <p class="works-text text">
+                Essayist currently supports APA, MLA, Chicago/ Turabian &
+                Harvard. Stay tuned for more citation styles!
+              </p>
+            </li>
+            <li class="works-list-item">
+              <div class="works-icon">
+                <svg width="32" height="32">
+                  <use
+                    href="./src/symbol-defs.svg#icon-how_it_works_book"
+                  ></use>
+                </svg>
+              </div>
+              <h4 class="works-title-text">Add References</h4>
+              <p class="works-text text">
+                Use Essayist’s Reference Manager & built-in Google Scholar
+                support to easily add references at any time.
+              </p>
+            </li>
+            <li class="works-list-item">
+              <div class="works-icon">
+                <svg width="32" height="32">
+                  <use
+                    href="./src/symbol-defs.svg#icon-how_it_works_pencil"
+                  ></use>
+                </svg>
+              </div>
+              <h4 class="works-title-text">Write & Cite</h4>
+              <p class="works-text text">
+                Let Essayist handle the formatting and begin writing your essay
+                stress-free! Insert citations with the click of a button.
+              </p>
+            </li>
+          </ul>
+          <svg class="works-arrow-first">
+            <use href="./src/symbol-defs.svg#icon-how_it_works_arrows"></use>
+          </svg>
+          <svg class="works-arrow-second" width="32" height="32">
+            <use href="./src/symbol-defs.svg#icon-how_it_works_arrow_2"></use>
+          </svg>
+        </div>
+        <div class="works-section-block">
+          <div class="works-block-wrapper">
+            <div class="works-block-pink content-block">
+              <div class="works-block-img-references">
+                <picture>
+                  <source
+                    srcset="
+                      ./src/img/how_it_works/references-desk.png    1x,
+                      ./src/img/how_it_works/references-desk@2x.png 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      ./src/img/how_it_works/references-mob.png    1x,
+                      ./src/img/how_it_works/references-mob@2x.png 2x
+                    "
+                    media="(max-width: 1023px)"
+                  />
+                  <img
+                    class="works-references"
+                    src="./src/img/how_it_works/references-mob.png"
+                    alt="example references"
+                  />
+                </picture>
+                <picture>
+                  <source
+                    srcset="
+                      ./src/img/how_it_works/mac9-desk.png    1x,
+                      ./src/img/how_it_works/mac9-desk@2x.png 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      ./src/img/how_it_works/mac9-mob.png    1x,
+                      ./src/img/how_it_works/mac9-mob@2x.png 2x
+                    "
+                    media="(max-width: 1023px)"
+                  />
+                  <img
+                    class="works-references-pin"
+                    src="./src/img/how_it_works/mac9-mob.png"
+                    alt="pin"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div class="works-block-text content-block">
+              <div class="works-block-text-wrapper">
+                <h3 class="block-title">Automatic <br />Formatting</h3>
+                <p class="text">
+                  Let Essayist handle the formatting so you can focus on the
+                  content of your essay. From page set-up to citations,
+                  footnotes & references, Essayist takes care of everything.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="works-block-wrapper works-block-wrapper-violet">
+            <div class="works-block-violet content-block">
+              <div class="works-block-img-library">
+                <picture>
+                  <source
+                    srcset="
+                      ./src/img/how_it_works/library-desk.png    1x,
+                      ./src/img/how_it_works/library-desk@2x.png 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      ./src/img/how_it_works/library-mob.png    1x,
+                      ./src/img/how_it_works/library-mob@2x.png 2x
+                    "
+                    media="(max-width: 1023px)"
+                  />
+                  <img
+                    class="works-library"
+                    src="./src/img/how_it_works/library-mob.png"
+                    alt="example library"
+                  />
+                </picture>
+                <img
+                  class="works-library-pin"
+                  src="./src/img/svg/done.svg"
+                  alt="icon check mark"
+                />
+              </div>
+            </div>
+            <div class="works-block-text content-block">
+              <div class="works-block-text-wrapper">
+                <h3 class="block-title">
+                  Reference <br />
+                  Manager
+                </h3>
+                <p class="text">
+                  Add and manage references using Essayist’s built-in reference
+                  manager. Create collections and easily add sources and
+                  Essayist will generate a perfectly formatted reference list.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-------------MOBAIL_MENU----------->
 
     <div class="mobile-menu" id="mobile-menu">
-  <div class="mobile-content">
-    <div class="mobile-container">
-      <a href="./index.html" class="header-logo mobile-menu-logo" alt="Logo company">
-            <img class="svg-logo" src="./src/img/logo.svg">
-            </img>
+      <div class="mobile-content">
+        <div class="mobile-container">
+          <a href="./index.html" class="header-logo mobile-menu-logo">
+            <img
+              class="svg-logo"
+              src="./src/img/svg/logo.svg"
+              alt="Logo company"
+            />
           </a>
-    <button class="mobile-menu-close-btn" id="mobile-close-btn" type="button" aria-label="closed">
-    <svg
-        class="icon-closed"
-        aria-label="close modal icon"
-      >
-       <use xlink:href="./src/symbol-defs.svg#closed-icon"></use>
-      </svg>
-    </button>
+          <button
+            class="mobile-menu-close-btn"
+            id="mobile-close-btn"
+            type="button"
+            aria-label="closed"
+          >
+            <svg class="icon-closed" aria-label="close modal icon">
+              <use xlink:href="./src/symbol-defs.svg#closed-icon"></use>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mobile-menu-navigation">
+          <ul class="mobile-list">
+            <li class="mobile-menu-item menu-link-add-color list">
+              <a class="menu-link-mobile" href="#how_it_works">How it Works</a>
+            </li>
+            <li class="mobile-menu-item menu-link-add-color list">
+              <a class="menu-link-mobile" href="#features">Features</a>
+            </li>
+            <li class="mobile-menu-item menu-link-add-color list">
+              <a class="menu-link-mobile" href="#pricing">Pricing</a>
+            </li>
+            <li class="mobile-menu-item menu-link-add-color list">
+              <a class="menu-link-mobile" href="#faq">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn-download-app-mobile" type="button">Get App</button>
+      </div>
     </div>
 
-    <nav class="mobile-menu-navigation">
-      <ul class="mobile-list">
-        <li class="mobile-menu-item menu-link-add-color list">
-          <a class="menu-link-mobile" href="#how_it_works">How it Works</a>
-        </li>
-        <li class="mobile-menu-item menu-link-add-color list">
-          <a class="menu-link-mobile" href="#features">Features</a>
-        </li>
-        <li class="mobile-menu-item menu-link-add-color list">
-          <a class="menu-link-mobile" href="#pricing">Pricing</a>
-        </li>
-        <li class="mobile-menu-item menu-link-add-color list">
-          <a class="menu-link-mobile" href="#faq">FAQ</a>
-        </li>
-      </ul>
-    </nav>
-    <button class="btn-download-app-mobile" type="button">Get App</button>
-  </div>
-</div>
-   
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
