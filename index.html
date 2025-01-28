@@ -184,56 +184,59 @@
       <section class="works-section section">
         <div class="works-section-container">
           <h2 class="works-title section-title">How It Works</h2>
-          <ul class="works-list list">
-            <li class="works-list-item">
-              <div class="works-icon">
-                <svg width="32" height="32">
-                  <use
-                    href="./src/symbol-defs.svg#icon-how_it_works_list"
-                  ></use>
-                </svg>
-              </div>
-              <h4 class="works-title-text">Choose Citation Style</h4>
-              <p class="works-text text">
-                Essayist currently supports APA, MLA, Chicago/ Turabian &
-                Harvard. Stay tuned for more citation styles!
-              </p>
-            </li>
-            <li class="works-list-item">
-              <div class="works-icon">
-                <svg width="32" height="32">
-                  <use
-                    href="./src/symbol-defs.svg#icon-how_it_works_book"
-                  ></use>
-                </svg>
-              </div>
-              <h4 class="works-title-text">Add References</h4>
-              <p class="works-text text">
-                Use Essayist’s Reference Manager & built-in Google Scholar
-                support to easily add references at any time.
-              </p>
-            </li>
-            <li class="works-list-item">
-              <div class="works-icon">
-                <svg width="32" height="32">
-                  <use
-                    href="./src/symbol-defs.svg#icon-how_it_works_pencil"
-                  ></use>
-                </svg>
-              </div>
-              <h4 class="works-title-text">Write & Cite</h4>
-              <p class="works-text text">
-                Let Essayist handle the formatting and begin writing your essay
-                stress-free! Insert citations with the click of a button.
-              </p>
-            </li>
-          </ul>
-          <svg class="works-arrow-first">
-            <use href="./src/symbol-defs.svg#icon-how_it_works_arrows"></use>
-          </svg>
-          <svg class="works-arrow-second" width="32" height="32">
-            <use href="./src/symbol-defs.svg#icon-how_it_works_arrow_2"></use>
-          </svg>
+          <div class="works-list-wrapper">
+            <ul class="works-list list">
+              <li class="works-list-item">
+                <div class="works-icon">
+                  <svg width="32" height="32">
+                    <use
+                      href="./src/symbol-defs.svg#icon-how_it_works_list"
+                    ></use>
+                  </svg>
+                </div>
+                <h4 class="works-title-text">Choose Citation Style</h4>
+                <p class="works-text text">
+                  Essayist currently supports APA, MLA, Chicago/ Turabian &
+                  Harvard. Stay tuned for more citation styles!
+                </p>
+              </li>
+              <li class="works-list-item">
+                <div class="works-icon">
+                  <svg width="32" height="32">
+                    <use
+                      href="./src/symbol-defs.svg#icon-how_it_works_book"
+                    ></use>
+                  </svg>
+                </div>
+                <h4 class="works-title-text">Add References</h4>
+                <p class="works-text text">
+                  Use Essayist’s Reference Manager & built-in Google Scholar
+                  support to easily add references at any time.
+                </p>
+              </li>
+              <li class="works-list-item">
+                <div class="works-icon">
+                  <svg width="32" height="32">
+                    <use
+                      href="./src/symbol-defs.svg#icon-how_it_works_pencil"
+                    ></use>
+                  </svg>
+                </div>
+                <h4 class="works-title-text">Write & Cite</h4>
+                <p class="works-text text">
+                  Let Essayist handle the formatting and begin writing your
+                  essay stress-free! Insert citations with the click of a
+                  button.
+                </p>
+              </li>
+            </ul>
+            <svg class="works-arrow-first">
+              <use href="./src/symbol-defs.svg#icon-how_it_works_arrows"></use>
+            </svg>
+            <svg class="works-arrow-second" width="32" height="32">
+              <use href="./src/symbol-defs.svg#icon-how_it_works_arrow_2"></use>
+            </svg>
+          </div>
         </div>
         <div class="works-section-block">
           <div class="works-block-wrapper">
@@ -359,6 +362,98 @@
                 type="video/mp4"
               />
             </video>
+          </div>
+        </div>
+        <div class="works-section-block">
+          <div class="works-block-wrapper">
+            <div class="citations-block-color green content-block">
+              <div class="works-block-img-references">
+                <picture>
+                  <source
+                    srcset="
+                      ./src/img/citations/citations-add-desk.png    1x,
+                      ./src/img/citations/citations-add-desk@2x.png 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      ./src/img/citations/citations-add-mob.png     1x,
+                      ./src/img/citations/citations-add-desk@2x.png 2x
+                    "
+                    media="(max-width: 1023px)"
+                  />
+                  <img
+                    class="works-references"
+                    src="./src/img/citations/citations-add-mob.png"
+                    alt="example how add citations"
+                  />
+                </picture>
+                <img
+                  class="citations-add-pin"
+                  src="./src/img/citations/citations-add-pin.png"
+                  alt="icon add to essayist"
+                />
+              </div>
+            </div>
+            <div class="works-block-text content-block">
+              <div class="works-block-text-wrapper">
+                <h3 class="block-title">Google Scholar</h3>
+                <p class="text">
+                  Search for references in the familiar Google Scholar interface
+                  and simply click Add to Essayist on any reference you find.
+                  Alternatively, use Essayist’s built-in book and journal search
+                  or simply paste a URL
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="works-block-wrapper works-block-wrapper-violet">
+            <div class="citations-block-color orange content-block">
+              <div class="citations-block-img-library">
+                <picture>
+                  <source
+                    srcset="
+                      ./src/img/citations/citations-style-desk.png    1x,
+                      ./src/img/citations/citations-style-desk@2x.png 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      ./src/img/citations/citations-style-mob.png    1x,
+                      ./src/img/citations/citations-style-mob@2x.png 2x
+                    "
+                    media="(max-width: 1023px)"
+                  />
+                  <img
+                    class="works-library citations-img-add"
+                    src="./src/img/citations/citations-style-mob.png"
+                    alt="citation style"
+                  />
+                </picture>
+                <img
+                  class="citations-apa-pin"
+                  src="./src/img/citations/citations-apa.png"
+                  alt="apa"
+                />
+                <img
+                  class="citations-mla-pin"
+                  src="./src/img/citations/citations-mla.png"
+                  alt="mla"
+                />
+              </div>
+            </div>
+            <div class="works-block-text content-block">
+              <div class="works-block-text-wrapper">
+                <h3 class="block-title">APA, MLA, <br />& more</h3>
+                <p class="text">
+                  Essayist currently supports four commonly-used citation
+                  styles: APA, Chicago/Turabian, Harvard and MLA. Stay tuned for
+                  many more citation styles!
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

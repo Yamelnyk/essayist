@@ -593,7 +593,7 @@ input {
 /* =================How It Works================= */
 
 .works-section-container {
-  position: relative;
+  /* position: relative; */
   border-radius: 30px;
   background: #fafbfc;
   box-shadow: 4px 4px 24px 0px rgba(7, 16, 19, 0.06) inset;
@@ -613,7 +613,9 @@ input {
 .works-title {
   margin-bottom: 2rem;
 }
-
+.works-list-wrapper {
+  position: relative;
+}
 .works-list {
   display: flex;
   flex-direction: column;
@@ -621,7 +623,7 @@ input {
 }
 
 .works-list-item {
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -660,7 +662,7 @@ input {
 
 .works-arrow-first {
   position: absolute;
-  top: 23.8rem;
+  top: 15.8rem;
   left: -17.5rem;
   right: 0;
   width: 3rem;
@@ -681,6 +683,9 @@ input {
 }
 
 @media screen and (min-width: 768px) {
+  .works-section-container {
+    padding-top: 5.25rem;
+  }
   .works-list {
     max-width: 480px;
     margin-left: auto;
@@ -691,6 +696,9 @@ input {
   }
   .text {
     font-size: 17px;
+  }
+  .section-title {
+    font-size: 48px;
   }
 }
 
@@ -705,9 +713,6 @@ input {
     padding: 7.5rem 2.5rem 7.1rem 2.5rem;
   }
 
-  .section-title {
-    font-size: 48px;
-  }
   .works-title {
     margin-bottom: 4rem;
   }
@@ -721,16 +726,16 @@ input {
   }
 
   .works-arrow-first {
-    top: 23.5rem;
-    left: -21rem;
-    width: 4rem;
-    height: 4rem;
+    top: 8rem;
+    left: -38%;
+    width: 4.5rem;
+    height: 4.5rem;
     transform: rotate(-45deg);
   }
 
   .works-arrow-second {
-    top: 46%;
-    right: -20rem;
+    top: 25%;
+    right: -37%;
     width: 6rem;
     height: 6rem;
     transform: rotate(-140deg);
@@ -739,11 +744,12 @@ input {
 
 @media screen and (min-width: 1280px) {
   .works-arrow-first {
-    left: 31%;
+    right: -3rem;
   }
 
   .works-arrow-second {
-    right: 31%;
+    top: 28%;
+    right: -30%;
   }
 }
 
@@ -890,6 +896,7 @@ input {
 
 .citations-section-container {
   padding: 64px 16px 93px;
+  margin-bottom: 5rem;
   border-radius: 30px;
   background: linear-gradient(180deg, #007aff 0%, #4575ee 100%);
   box-shadow: 4px 4px 20px 0px rgba(2, 11, 22, 0.2) inset;
@@ -926,7 +933,84 @@ input {
 }
 
 @media screen and (min-width: 768px) {
+  .citations-title {
+    margin-bottom: 24px;
+  }
   .citations-section-container {
     padding: 120px 40px;
   }
+}
+
+@media screen and (min-width: 1280px) {
+  .citations-section-container {
+    padding-bottom: 180px;
+  }
+
+  .citations-video {
+    border-radius: 24px;
+    border-width: 24px;
+  }
+}
+
+.citations-block-color {
+  padding: 2.5rem 3rem;
+  border-radius: 30px;
+  box-shadow: 4px 4px 20px 0px rgba(25, 13, 2, 0.2) inset;
+}
+
+.citations-block-color.orange {
+  position: relative;
+  background: #feb62b;
+}
+
+.citations-block-color.green {
+  background: #1ebe95;
+}
+
+.citations-add-pin {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 45%;
+  height: 8%;
+  top: 42%;
+  left: -85%;
+  right: 0;
+}
+
+.citations-apa-pin {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 10%;
+  height: 10%;
+  bottom: 9%;
+  left: 0;
+  right: 85%;
+  transform: rotate(-50deg);
+  z-index: 1;
+}
+
+.citations-mla-pin {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 11%;
+  height: 11%;
+  top: 45%;
+  left: 87%;
+  right: 0;
+  transform: rotate(50deg);
+  z-index: 1;
+}
+
+.citations-block-img-library {
+  max-width: 494px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.citations-img-add {
+  z-index: 2;
+  position: relative;
 }
