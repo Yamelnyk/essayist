@@ -920,7 +920,7 @@ input {
 .citations-video {
   border-radius: 14px;
   border: 13px solid #fff;
-  /* background: lightgray 0px -0.252px / 100% 100.243% no-repeat; */
+  background: lightgray 0px -0.252px / 100% 100.243% no-repeat;
   box-shadow: 4px 4px 16px 0px rgba(2, 11, 22, 0.12);
 }
 
@@ -971,7 +971,7 @@ input {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  max-width: 45%;
+  max-width: 40%;
   height: 8%;
   top: 42%;
   left: -85%;
