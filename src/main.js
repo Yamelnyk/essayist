@@ -1,5 +1,3 @@
-import './style.css';
-
 const mobileMenuBtn = document.querySelector('.mobile-menu-open-btn');
 const mobileMenuCloseBtn = document.querySelector('.mobile-menu-close-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
