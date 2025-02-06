@@ -971,6 +971,12 @@ input {
   background: #1ebe95;
 }
 
+@media screen and (min-width: 768px) {
+  .citations-block-color {
+    padding: 5% 5%;
+  }
+}
+
 .citations-add-pin {
   position: absolute;
   margin-left: auto;
@@ -1333,5 +1339,110 @@ input {
 
   .features-title-text {
     font-size: 24px;
+  }
+}
+
+/* -------===========-- Reviews ------============----- */
+
+.more {
+  display: none;
+}
+
+.reviews-section-container {
+  padding: 64px 24px;
+  border-radius: 30px;
+  background: #fafbfc;
+  box-shadow: 4px 4px 24px 0px rgba(7, 16, 19, 0.06) inset;
+}
+
+.reviews-title {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.reviews-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.reviews-block-text {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e6e7e7;
+  background: #fff;
+  box-shadow: 4px 4px 12px 0px rgba(2, 11, 22, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* .reviews-block-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+} */
+
+.reviews-block-title {
+  color: #071013;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.006em;
+}
+
+.myBtn {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  color: #007aff;
+  font-size: 17px;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-section-container {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  .reviews-title {
+    text-align: center;
+    margin-bottom: 47px;
+  }
+
+  .reviews-block-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 688px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .reviews-block-text {
+    max-width: 274px;
+  }
+
+  .reviews-block-title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .reviews-block-text {
+    max-width: 490px;
+  }
+
+  .reviews-block-wrapper {
+    max-width: 1152px;
+  }
+
+  .reviews-block-text {
+    padding: 32px;
   }
 }
