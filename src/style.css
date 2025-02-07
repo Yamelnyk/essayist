@@ -42,6 +42,7 @@ a {
 }
 
 body {
+  padding-top: 70px;
   font-family: 'Plus Jakarta Sans';
   font-size: 1.06rem;
   color: #20282b;
@@ -83,25 +84,42 @@ input {
   margin-right: auto;
 }
 
-.nav-list,
+.nav,
 .btn-download-app {
   display: none;
 }
 
 .page-header {
-  display: block;
-  position: sticky;
-  z-index: 100;
-  /* background: rgba(250, 251, 252, 0.8);
-  backdrop-filter: blur(8px); */
-  background: #fafbfc;
-}
+  box-sizing: border-box;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  /* width: 100%; */
+  z-index: 100;
+  background: rgb(249, 250, 251, 0.8);
+  backdrop-filter: blur(20px);
+}
+@media screen and (max-width: 374px) {
+  .page-header {
+    position: sticky;
+  }
+  body {
+    padding-top: 0;
+  }
+}
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* height: 49px; */
+  width: 100% !important;
+  /* max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto; */
 }
 
 .header-logo {
@@ -138,16 +156,18 @@ input {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-  .page-header {
+  /* .page-header {
     background: rgba(250, 251, 252, 0.8);
     backdrop-filter: blur(8px);
-  }
+  } */
   .header-container {
     /* display: flex; */
     /* padding-left: 11.6rem;
     padding-right: 11.6rem; */
     padding-top: 1.06rem;
     padding-bottom: 1.06rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .svg-logo {
@@ -179,6 +199,9 @@ input {
     font-size: 1.06rem;
     color: #fff;
     line-height: 150%;
+  }
+  .nav {
+    display: block;
   }
 
   .nav-list {

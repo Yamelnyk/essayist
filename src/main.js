@@ -3,6 +3,7 @@
 const mobileMenuBtn = document.querySelector('.mobile-menu-open-btn');
 const mobileMenuCloseBtn = document.querySelector('.mobile-menu-close-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
+const menuLink = document.querySelectorAll('.menu-link-mobile');
 
 mobileMenuBtn.addEventListener('click', () => {
   mobileMenu.classList.add('is-open');
@@ -12,6 +13,13 @@ mobileMenuBtn.addEventListener('click', () => {
 mobileMenuCloseBtn.addEventListener('click', () => {
   mobileMenu.classList.remove('is-open');
   document.body.style.overflow = 'auto';
+});
+
+menuLink.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('is-open');
+    document.body.style.overflow = 'auto';
+  });
 });
 
 /* --------- Reviews ----------- */
