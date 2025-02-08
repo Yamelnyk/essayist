@@ -91,18 +91,14 @@ input {
 
 .page-header {
   box-sizing: border-box;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
-  /* width: 100%; */
   z-index: 100;
   background: rgb(249, 250, 251, 0.8);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 @media screen and (max-width: 374px) {
   .page-header {
@@ -116,10 +112,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100% !important;
-  /* max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto; */
+  width: 100%;
+  background: transparent;
 }
 
 .header-logo {
@@ -132,9 +126,6 @@ input {
   padding: 0;
   border: 0;
   background-color: inherit;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   width: 20px;
   height: 15px;
 }
