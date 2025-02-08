@@ -1,3 +1,9 @@
+import Swiper from 'swiper';
+// import 'swiper/css';
+import { Keyboard } from 'swiper/modules';
+import { Mousewheel } from 'swiper/modules';
+
+import Accordion from 'accordion-js';
 /* -------------MOBAIL_MENU----------- */
 
 const mobileMenuBtn = document.querySelector('.mobile-menu-open-btn');
@@ -79,5 +85,54 @@ document.addEventListener('click', event => {
         moreText.style.display = 'inline';
       }
     }
+  }
+});
+
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   direction: 'vertical',
+//   // loop: true,
+//   createElements: true,
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+//   mousewheel: {
+//     invert: true,
+//   },
+// });
+
+const swiperEl = document.querySelector('.swiper-container');
+
+const swiper = new Swiper('.tab-list-swiper', {
+  modules: [Keyboard, Mousewheel],
+  speed: 800,
+  slidesPerView: 3,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  mousewheel: {
+    invert: true,
+  },
+  rewind: true,
+
+  breakpoints: {
+    375: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+  },
+
+  slideToClickedSlide: true,
+});
+
+swiperEl.addEventListener('keydown', function (event) {
+  event.preventDefault();
+  if (event.key === 'Tab') {
+    swiper.slideNext();
+  } else {
+    swiper.slidePrev();
   }
 });

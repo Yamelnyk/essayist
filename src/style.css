@@ -1352,6 +1352,13 @@ input {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .features-section-container {
+    padding-top: 133px;
+    padding-bottom: 194px;
+  }
+}
+
 /* -------===========-- Reviews ------============----- */
 
 .more {
@@ -1388,13 +1395,6 @@ input {
   align-items: flex-start;
   justify-content: space-between;
 }
-
-/* .reviews-block-text-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
-} */
 
 .reviews-block-title {
   color: #071013;
@@ -1444,6 +1444,11 @@ input {
 }
 
 @media screen and (min-width: 1280px) {
+  .reviews-section-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
   .reviews-block-text {
     max-width: 490px;
   }
@@ -1508,4 +1513,188 @@ input {
   font-size: 24px;
   cursor: pointer;
   line-height: 85%;
+}
+
+/* ======================= PRICING ====================== */
+
+.pricing-section-container {
+  padding: 64px 16px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #007aff 0%, #4575ee 100%);
+  box-shadow: 4px 4px 20px 0px rgba(2, 11, 22, 0.2) inset;
+}
+.pricing-section-container-wrapper {
+  max-width: 396px;
+}
+
+.pricing-text {
+  margin-bottom: 40px;
+}
+
+.pricing-item-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.pricing-item-card {
+  max-width: 266px;
+  border-radius: 24px;
+  box-shadow: 4px 4px 16px 0px rgba(2, 11, 22, 0.12);
+  overflow: hidden;
+}
+
+.pricing-item {
+  border: 1px solid #e6e7e7;
+  background: #ffff;
+}
+
+.pricing-item-top {
+  color: #071013;
+  padding: 16px 24px 24px;
+  text-align: center;
+}
+
+.pricing-item-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.0075em;
+}
+.pricing-item-top.dark {
+  background-color: #071013;
+  border: 0;
+  color: #fff;
+}
+
+.pricing-item-bottom {
+  color: rgba(106, 112, 113, 1);
+  padding: 24px 32px;
+  border-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.numeric {
+  color: #071013;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.pricing-download-box {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  border: 1px solid #e6e7e7;
+  background: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .pricing-section-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    border-radius: 40px;
+  }
+  .pricing-section-container-wrapper {
+    max-width: 575px;
+  }
+
+  .pricing-text {
+    margin-bottom: 48px;
+  }
+
+  .pricing-item-flex {
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+
+  .pricing-item-top {
+    padding: 24px;
+  }
+  .pricing-item-bottom {
+    padding: 24px 35px 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .pricing-section-container {
+    padding-bottom: 164px;
+  }
+}
+
+/* ======================= FAQ ====================== */
+
+.faq-section-container {
+  /* position: relative; */
+  padding: 64px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.faq-content-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* .tab-list-swiper {
+  padding: 4px;
+  border-radius: 16px;
+  border: 1px solid #e6e7e7;
+  box-shadow: 4px 4px 12px 0px rgba(2, 11, 22, 0.04);
+} */
+.faq-tab-list {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  /* position: absolute; */
+  gap: 5px;
+  padding: 4px;
+  border-radius: 16px;
+  border: 1px solid #e6e7e7;
+  box-shadow: 4px 4px 12px 0px rgba(2, 11, 22, 0.04);
+  width: 412px;
+}
+
+/* .faq-tab-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.faq-item-btn {
+  padding: 0.3rem 0.75rem;
+  height: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* gap: 0.4rem; */
+  font-size: 17px;
+  border: 0;
+  background-color: inherit;
+  border-radius: 12px;
+}
+
+.faq-item-btn:hover {
+  color: #fff;
+  background: linear-gradient(180deg, #007aff 0%, #4575ee 100%);
 }
