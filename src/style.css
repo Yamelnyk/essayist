@@ -1645,7 +1645,7 @@ input {
 
 .faq-section-container {
   position: relative;
-  padding: 64px 24px;
+  padding: 64px 16px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -1656,6 +1656,15 @@ input {
   gap: 32px;
 }
 
+.tab-list-swiper {
+  border-radius: 16px;
+  border: 1px solid #e6e7e7;
+  box-shadow: 4px 4px 12px 0px rgba(2, 11, 22, 0.04);
+  width: 100%;
+  max-width: 535px;
+  overflow: hidden;
+}
+
 /* .tab-list-swiper {
   padding: 4px;
   border-radius: 16px;
@@ -1664,15 +1673,12 @@ input {
 } */
 .faq-tab-list {
   height: 40px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  position: absolute;
-  gap: 5px;
+  position: relative;
+  /* gap: 5px; */
   padding: 4px;
-  border-radius: 16px;
-  border: 1px solid #e6e7e7;
-  box-shadow: 4px 4px 12px 0px rgba(2, 11, 22, 0.04);
-  width: 412px;
+  /* width: 400px; */
 }
 
 /* .faq-tab-list-item {
@@ -1684,17 +1690,21 @@ input {
 .faq-item-btn {
   padding: 0.3rem 0.75rem;
   height: 100%;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  /* gap: 0.4rem; */
+  align-items: center;
   font-size: 17px;
   border: 0;
   background-color: inherit;
   border-radius: 12px;
+  width: 100%;
 }
 
 .faq-item-btn:hover {
   color: #fff;
   background: linear-gradient(180deg, #007aff 0%, #4575ee 100%);
+}
+
+.faq-item-btn-Requirements {
+  width: 100px;
 }

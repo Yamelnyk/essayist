@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
-// import 'swiper/css';
-import { Keyboard } from 'swiper/modules';
+import 'swiper/css';
 import { Mousewheel } from 'swiper/modules';
 
 import Accordion from 'accordion-js';
@@ -88,51 +87,36 @@ document.addEventListener('click', event => {
   }
 });
 
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   // loop: true,
-//   createElements: true,
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-//   mousewheel: {
-//     invert: true,
-//   },
-// });
-
-const swiperEl = document.querySelector('.swiper-container');
-
 const swiper = new Swiper('.tab-list-swiper', {
-  modules: [Keyboard, Mousewheel],
+  modules: [Mousewheel],
   speed: 800,
-  slidesPerView: 3,
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
+  slidesPerView: 2.2,
+  spaceBetween: 8,
+  rewind: true,
+  slideToClickedSlide: true,
   mousewheel: {
     invert: true,
   },
-  rewind: true,
-
   breakpoints: {
-    375: {
-      slidesPerView: 2,
+    320: {
+      slidesPerView: 2.2,
+      spaceBetween: 4,
+      mousewheel: false,
     },
-    768: {
+    400: {
+      slidesPerView: 2.5,
+      mousewheel: false,
+    },
+    421: {
+      slidesPerView: 2.7,
+      mousewheel: false,
+    },
+    500: {
+      slidesPerView: 3,
+      mousewheel: false,
+    },
+    600: {
       slidesPerView: 4,
     },
   },
-
-  slideToClickedSlide: true,
-});
-
-swiperEl.addEventListener('keydown', function (event) {
-  event.preventDefault();
-  if (event.key === 'Tab') {
-    swiper.slideNext();
-  } else {
-    swiper.slidePrev();
-  }
 });
