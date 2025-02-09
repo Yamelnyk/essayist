@@ -3,6 +3,7 @@ import 'swiper/css';
 import { Mousewheel } from 'swiper/modules';
 
 import Accordion from 'accordion-js';
+
 /* -------------MOBAIL_MENU----------- */
 
 const mobileMenuBtn = document.querySelector('.mobile-menu-open-btn');
@@ -28,23 +29,6 @@ menuLink.forEach(link => {
 });
 
 /* --------- Reviews ----------- */
-// document.addEventListener('click', event => {
-//   if (event.target.classList.contains('myBtn')) {
-//     const reviewBlock = event.target.closest('.reviews-block-text');
-//     const dots = reviewBlock.querySelector('.dots');
-//     const moreText = reviewBlock.querySelector('.more');
-
-//     if (dots.style.display === 'none') {
-//       dots.style.display = 'inline';
-//       event.target.textContent = 'Read more';
-//       moreText.style.display = 'none';
-//     } else {
-//       dots.style.display = 'none';
-//       event.target.textContent = 'Collapse';
-//       moreText.style.display = 'inline';
-//     }
-//   }
-// });
 
 document.addEventListener('click', event => {
   if (event.target.classList.contains('myBtn')) {
