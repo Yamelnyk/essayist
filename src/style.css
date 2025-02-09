@@ -1644,7 +1644,7 @@ input {
 /* ======================= FAQ ====================== */
 
 .faq-section-container {
-  /* position: relative; */
+  position: relative;
   padding: 64px 24px;
   display: flex;
   flex-direction: column;
@@ -1666,7 +1666,7 @@ input {
   height: 40px;
   display: flex;
   align-items: center;
-  /* position: absolute; */
+  position: absolute;
   gap: 5px;
   padding: 4px;
   border-radius: 16px;
