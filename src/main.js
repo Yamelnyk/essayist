@@ -3,6 +3,7 @@ import 'swiper/css';
 import { Mousewheel } from 'swiper/modules';
 
 import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
 /* -------------MOBAIL_MENU----------- */
 
@@ -71,6 +72,8 @@ document.addEventListener('click', event => {
   }
 });
 
+/* ------------- SWIPER ----------- */
+
 const swiper = new Swiper('.tab-list-swiper', {
   modules: [Mousewheel],
   speed: 800,
@@ -104,3 +107,60 @@ const swiper = new Swiper('.tab-list-swiper', {
     },
   },
 });
+
+const faqAccordion = document.querySelector('.faq-accordion-container');
+
+/* ------------- FAQ-ACCORDION ----------- */
+
+new Accordion(faqAccordion, {
+  duration: 600,
+  openOnInit: [0],
+
+  elementClass: 'ac-faq',
+  triggerClass: 'faq-ac-title',
+  panelClass: 'ac-text',
+  activeClass: 'is-active-faq',
+
+  showMultiple: true,
+});
+
+// const swiperAboutme = new Swiper(swiperContainer, {
+//   wrapperClass: 'swiper-wrapper-aboutme',
+//   slideClass: 'swiper-slide-aboutme',
+//   slideActiveClass: 'swiper-slide-active-aboutme',
+
+//   direction: 'horizontal',
+//   loop: true,
+//   modules: [Navigation, Keyboard],
+
+//   slidesPerView: 1,
+//   spaceBetween: 0,
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 2,
+//     },
+
+//     768: {
+//       slidesPerView: 3,
+//     },
+
+//     1440: {
+//       slidesPerView: 6,
+//     },
+//   },
+
+//   navigation: {
+//     nextEl: '.swiper-button-next-aboutme',
+//   },
+
+//   nested: true,
+
+//   keyboard: {
+//     enabled: true,
+//     onlyInViewport: false,
+//   },
+// });
+
+// nextSlideBtnAMe.addEventListener('click', e => {
+//   swiperAboutme.slideNext();
+// });

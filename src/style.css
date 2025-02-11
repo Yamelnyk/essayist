@@ -294,8 +294,6 @@ input {
   padding: 0;
   width: 16px;
   height: 17px;
-
-  background-color: transparent;
 }
 
 .mobile-menu-logo {
@@ -376,7 +374,7 @@ input {
 
 /* ----------INTRODUCTION-------------- */
 
-/* 
+/*
  */
 .section {
   padding-top: 2.5rem;
@@ -1645,10 +1643,17 @@ input {
 
 .faq-section-container {
   position: relative;
-  padding: 64px 16px;
+  padding: 64px 24px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  border-radius: 30px;
+  background: #fafbfc;
+  box-shadow: 4px 4px 24px 0px rgba(7, 16, 19, 0.06) inset;
+}
+
+.faq-title {
+  text-align: left;
 }
 .faq-content-tab {
   display: flex;
@@ -1705,6 +1710,76 @@ input {
   background: linear-gradient(180deg, #007aff 0%, #4575ee 100%);
 }
 
-.faq-item-btn-Requirements {
+/* .faq-item-btn-Requirements {
   width: 100px;
+} */
+
+.ac-text {
+  visibility: hidden;
+  transition: max-height ease;
+  transition: height, visibility;
+}
+
+.is-active-faq.ac-faq > .ac-text {
+  visibility: visible;
+}
+
+.ac-faq.js-enabled {
+  overflow: hidden;
+}
+
+.ac-trigger {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  fill: #071013;
+}
+
+.is-active-faq.ac-faq > .faq-ac-title > .ac-trigger {
+  transform: rotate(45deg);
+}
+
+.ac-faq {
+  display: flex;
+  flex-direction: column;
+  /* gap: 16px; */
+  padding: 16px 24px;
+  border-radius: 24px;
+  border: 1px solid #e6e7e7;
+  background: #fff;
+  box-shadow: 4px 4px 12px 0px rgba(2, 11, 22, 0.04);
+}
+
+.faq-ac-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  /* padding-bottom: 16px; */
+}
+
+.ac-text {
+  font-size: 15px;
+  line-height: 150%;
+  /* padding-top: 16px; */
+}
+
+.email-button {
+  display: block;
+  color: #007aff;
+  padding: 16px 32px;
+  border-radius: 16px;
+  border: 1px solid #007aff;
+  box-shadow: 4px 4px 12px 0px rgba(2, 11, 22, 0.04);
+  width: 70px;
+  margin-top: 32px;
+}
+
+.faq-accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
