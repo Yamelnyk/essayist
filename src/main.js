@@ -1,6 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Mousewheel } from 'swiper/modules';
+import { Scrollbar } from 'swiper/modules';
 
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
@@ -74,38 +75,70 @@ document.addEventListener('click', event => {
 
 /* ------------- SWIPER ----------- */
 
-const swiper = new Swiper('.tab-list-swiper', {
-  modules: [Mousewheel],
-  speed: 800,
-  slidesPerView: 2.2,
-  spaceBetween: 8,
-  rewind: true,
-  slideToClickedSlide: true,
+// const swiper = new Swiper('.tab-list-swiper', {
+//   modules: [Mousewheel],
+//   speed: 800,
+//   slidesPerView: 'auto',
+//   spaceBetween: 8,
+//   rewind: true,
+//   slideToClickedSlide: true,
+//   mousewheel: {
+//     invert: true,
+//   },
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 2.2,
+//       spaceBetween: 4,
+//       mousewheel: false,
+//     },
+//     400: {
+//       slidesPerView: 2.5,
+//       mousewheel: false,
+//     },
+//     421: {
+//       slidesPerView: 2.7,
+//       mousewheel: false,
+//     },
+//     500: {
+//       slidesPerView: 3,
+//       mousewheel: false,
+//     },
+//     600: {
+//       slidesPerView: 4,
+//     },
+//   },
+// });
+
+const swiper = new Swiper('.swiper-container', {
+  modules: [Mousewheel, Scrollbar],
+  slidesPerView: 'auto', // Авто-ширина слайдів
+  spaceBetween: 10, // Відстань між кнопками
+  slideToClickedSlide: true, // Вільна прокрутка
+
   mousewheel: {
     invert: true,
   },
-  breakpoints: {
-    320: {
-      slidesPerView: 2.2,
-      spaceBetween: 4,
-      mousewheel: false,
-    },
-    400: {
-      slidesPerView: 2.5,
-      mousewheel: false,
-    },
-    421: {
-      slidesPerView: 2.7,
-      mousewheel: false,
-    },
-    500: {
-      slidesPerView: 3,
-      mousewheel: false,
-    },
-    600: {
-      slidesPerView: 4,
-    },
+  freeMode: true,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+    // dragSize: 'auto', // Можливість тягнути скролбар
   },
+  // breakpoints: {
+  //   320: {
+  //     slidesPerView: 2,
+  //   },
+  //   375: {
+  //     slidesPerView: 2.5,
+  //   },
+
+  //   490: {
+  //     slidesPerView: 3.5,
+  //   },
+  //   620: {
+  //     slidesPerView: 4,
+  //   },
+  // },
 });
 
 const faqAccordion = document.querySelector('.faq-accordion-container');

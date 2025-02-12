@@ -1650,6 +1650,7 @@ input {
   border-radius: 30px;
   background: #fafbfc;
   box-shadow: 4px 4px 24px 0px rgba(7, 16, 19, 0.06) inset;
+  overflow: hidden;
 }
 
 .faq-title {
@@ -1661,48 +1662,37 @@ input {
   gap: 32px;
 }
 
-.tab-list-swiper {
-  border-radius: 16px;
-  border: 1px solid #e6e7e7;
-  box-shadow: 4px 4px 12px 0px rgba(2, 11, 22, 0.04);
-  width: 100%;
-  max-width: 535px;
+/* Основний контейнер Swiper */
+.swiper-container {
+  /* position: relative; */
   overflow: hidden;
-}
-
-/* .tab-list-swiper {
-  padding: 4px;
   border-radius: 16px;
   border: 1px solid #e6e7e7;
-  box-shadow: 4px 4px 12px 0px rgba(2, 11, 22, 0.04);
-} */
-.faq-tab-list {
-  height: 40px;
-  /* display: flex; */
-  align-items: center;
-  position: relative;
-  /* gap: 5px; */
-  padding: 4px;
-  /* width: 400px; */
+  max-width: 420px;
+  padding: 4px 4px 0;
 }
 
-/* .faq-tab-list-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
+/* Стилізація кнопок */
 .faq-item-btn {
-  padding: 0.3rem 0.75rem;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: auto !important;
+  flex: 0 0 auto;
+  border: none;
+  cursor: pointer;
+  padding: 0.33rem 0.75rem;
+  display: inline-block;
+  text-align: center;
   font-size: 17px;
-  border: 0;
   background-color: inherit;
   border-radius: 12px;
-  width: 100%;
+}
+
+.swiper-scrollbar {
+  background: #ddd;
+  height: 4px;
+  border-radius: 3px;
+  width: 10%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faq-item-btn:hover {
@@ -1782,4 +1772,39 @@ input {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  max-width: 535px;
 }
+.swiper {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 510px) {
+  .swiper-scrollbar {
+    display: none;
+  }
+
+  .swiper-container {
+    padding-bottom: 4px;
+  }
+}
+
+/* @media screen and (min-width: 768px) {
+  .faq-section-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    flex-direction: row;
+    gap: 79px;
+  }
+
+  .tab-list-swiper {
+    max-width: 235px;
+  }
+
+  .faq-tab-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80px;
+  }
+} */
