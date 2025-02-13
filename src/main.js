@@ -78,7 +78,7 @@ document.addEventListener('click', event => {
 const swiper = new Swiper('.swiper-container', {
   modules: [Mousewheel, Scrollbar],
   slidesPerView: 'auto',
-  spaceBetween: 10,
+  spaceBetween: 6,
   slideToClickedSlide: true,
   mousewheel: {
     invert: true,
