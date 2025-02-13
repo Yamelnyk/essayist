@@ -1695,7 +1695,9 @@ input {
   margin-right: auto;
 }
 
-.faq-item-btn:hover {
+.faq-item-btn:hover,
+.faq-item-btn:active,
+.faq-item-btn.active {
   color: #fff;
   background: linear-gradient(180deg, #007aff 0%, #4575ee 100%);
 }
@@ -1703,6 +1705,9 @@ input {
 /* .faq-item-btn-Requirements {
   width: 100px;
 } */
+.faq-accordion-container {
+  display: none;
+}
 
 .ac-text {
   visibility: hidden;
@@ -1768,7 +1773,7 @@ input {
   margin-top: 32px;
 }
 
-.faq-accordion-container {
+.faq-accordion-container.active {
   display: flex;
   flex-direction: column;
   gap: 32px;

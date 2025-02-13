@@ -937,14 +937,30 @@
             <h2 class="faq-title section-title">Still have Questions?</h2>
             <div class="swiper-container">
               <div class="swiper-wrapper">
-                <button class="faq-item-btn swiper-slide">General</button>
-                <button class="faq-item-btn swiper-slide">Features</button>
                 <button
-                  class="faq-item-btn swiper-slide faq-item-btn-Requirements"
+                  class="faq-item-btn swiper-slide active"
+                  data-target="general-faq"
+                >
+                  General
+                </button>
+                <button
+                  class="faq-item-btn swiper-slide"
+                  data-target="features-faq"
+                >
+                  Features
+                </button>
+                <button
+                  class="faq-item-btn swiper-slide"
+                  data-target="requirements-faq"
                 >
                   Requirements
                 </button>
-                <button class="faq-item-btn swiper-slide">Other</button>
+                <button
+                  class="faq-item-btn swiper-slide"
+                  data-target="other-faq"
+                >
+                  Other
+                </button>
               </div>
               <div class="swiper-scrollbar"></div>
             </div>
@@ -952,7 +968,7 @@
           <!-- </div> -->
           <div class="faq-content-question">
             <!-- <div class="general-faq"> -->
-            <ul class="faq-accordion-container list general-faq">
+            <ul id="general-faq" class="faq-accordion-container list active">
               <li class="ac-faq">
                 <h4 class="faq-ac-title">
                   What is Essayist?
@@ -1101,6 +1117,240 @@
                   Essayist has two subscription options: $5.99/Month or
                   $39.99/Year ($3.33/Month).
                 </p>
+              </li>
+            </ul>
+            <ul id="features-faq" class="faq-accordion-container list">
+              <li class="ac-faq">
+                <h4 class="faq-ac-title">
+                  What citation styles does Essayist Support?
+                  <button type="button" class="ac-trigger">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_375_8655)">
+                        <path
+                          d="M12.5061 3.09753C11.9545 3.09753 11.509 3.543 11.509 4.09455L11.502 11.003L4.58646 11.003C4.03492 11.003 3.58944 11.4485 3.58944 12C3.58944 12.5515 4.03492 12.997 4.58646 12.997L11.502 12.997L11.502 19.9125C11.502 20.4641 11.9474 20.9095 12.499 20.9095C13.0505 20.9095 13.496 20.4641 13.496 19.9125L13.496 12.997L20.4115 12.997C20.9631 12.997 21.4085 12.5515 21.4085 12C21.4085 11.4485 20.9631 11.003 20.4115 11.003L13.496 11.003L13.496 4.08748C13.496 3.55008 13.0435 3.09753 12.5061 3.09753Z"
+                          fill="#CDCFD0"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_375_8655">
+                          <rect
+                            width="24"
+                            height="24"
+                            fill="white"
+                            transform="translate(0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </h4>
+                <div class="ac-text">
+                  <p>
+                    <br />
+                    Essayist currently APA 7, MLA 8 & 9, Turabian 9 (Chicago),
+                    and several Harvard Style variations.
+                  </p>
+                </div>
+              </li>
+              <li class="ac-faq">
+                <h4 class="faq-ac-title">
+                  Can I generate references in Essayist?
+                  <button type="button" class="ac-trigger">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_375_8655)">
+                        <path
+                          d="M12.5061 3.09753C11.9545 3.09753 11.509 3.543 11.509 4.09455L11.502 11.003L4.58646 11.003C4.03492 11.003 3.58944 11.4485 3.58944 12C3.58944 12.5515 4.03492 12.997 4.58646 12.997L11.502 12.997L11.502 19.9125C11.502 20.4641 11.9474 20.9095 12.499 20.9095C13.0505 20.9095 13.496 20.4641 13.496 19.9125L13.496 12.997L20.4115 12.997C20.9631 12.997 21.4085 12.5515 21.4085 12C21.4085 11.4485 20.9631 11.003 20.4115 11.003L13.496 11.003L13.496 4.08748C13.496 3.55008 13.0435 3.09753 12.5061 3.09753Z"
+                          fill="#CDCFD0"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_375_8655">
+                          <rect
+                            width="24"
+                            height="24"
+                            fill="white"
+                            transform="translate(0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </h4>
+                <div class="ac-text">
+                  <p>
+                    <br />
+                    Yes! Essayist o ff ers many options to add and generate
+                    references: Built-in Google Scholar search, built-in book &
+                    journal search, paste a URL, manual entry forms, and a
+                    custom reference form.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul id="requirements-faq" class="faq-accordion-container list">
+              <li class="ac-faq">
+                <h4 class="faq-ac-title">
+                  Can I use Essayist on all my devices?
+                  <button type="button" class="ac-trigger">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_375_8655)">
+                        <path
+                          d="M12.5061 3.09753C11.9545 3.09753 11.509 3.543 11.509 4.09455L11.502 11.003L4.58646 11.003C4.03492 11.003 3.58944 11.4485 3.58944 12C3.58944 12.5515 4.03492 12.997 4.58646 12.997L11.502 12.997L11.502 19.9125C11.502 20.4641 11.9474 20.9095 12.499 20.9095C13.0505 20.9095 13.496 20.4641 13.496 19.9125L13.496 12.997L20.4115 12.997C20.9631 12.997 21.4085 12.5515 21.4085 12C21.4085 11.4485 20.9631 11.003 20.4115 11.003L13.496 11.003L13.496 4.08748C13.496 3.55008 13.0435 3.09753 12.5061 3.09753Z"
+                          fill="#CDCFD0"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_375_8655">
+                          <rect
+                            width="24"
+                            height="24"
+                            fill="white"
+                            transform="translate(0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </h4>
+                <div class="ac-text">
+                  <p>
+                    <br />
+                    Essayist is a universal app and can be used across iPhone,
+                    iPad, & Mac.
+                  </p>
+                </div>
+              </li>
+              <li class="ac-faq">
+                <h4 class="faq-ac-title">
+                  Which operating system do I need?
+                  <button type="button" class="ac-trigger">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_375_8655)">
+                        <path
+                          d="M12.5061 3.09753C11.9545 3.09753 11.509 3.543 11.509 4.09455L11.502 11.003L4.58646 11.003C4.03492 11.003 3.58944 11.4485 3.58944 12C3.58944 12.5515 4.03492 12.997 4.58646 12.997L11.502 12.997L11.502 19.9125C11.502 20.4641 11.9474 20.9095 12.499 20.9095C13.0505 20.9095 13.496 20.4641 13.496 19.9125L13.496 12.997L20.4115 12.997C20.9631 12.997 21.4085 12.5515 21.4085 12C21.4085 11.4485 20.9631 11.003 20.4115 11.003L13.496 11.003L13.496 4.08748C13.496 3.55008 13.0435 3.09753 12.5061 3.09753Z"
+                          fill="#CDCFD0"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_375_8655">
+                          <rect
+                            width="24"
+                            height="24"
+                            fill="white"
+                            transform="translate(0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </h4>
+                <div class="ac-text">
+                  <p>
+                    <br />
+                    Essayist requires macOS 11 or later and iOS 15 or later.
+                  </p>
+                </div>
+              </li>
+              <li class="ac-faq">
+                <h4 class="faq-ac-title">
+                  Is Essayist available for Android/Windows?
+                  <button type="button" class="ac-trigger">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_375_8655)">
+                        <path
+                          d="M12.5061 3.09753C11.9545 3.09753 11.509 3.543 11.509 4.09455L11.502 11.003L4.58646 11.003C4.03492 11.003 3.58944 11.4485 3.58944 12C3.58944 12.5515 4.03492 12.997 4.58646 12.997L11.502 12.997L11.502 19.9125C11.502 20.4641 11.9474 20.9095 12.499 20.9095C13.0505 20.9095 13.496 20.4641 13.496 19.9125L13.496 12.997L20.4115 12.997C20.9631 12.997 21.4085 12.5515 21.4085 12C21.4085 11.4485 20.9631 11.003 20.4115 11.003L13.496 11.003L13.496 4.08748C13.496 3.55008 13.0435 3.09753 12.5061 3.09753Z"
+                          fill="#CDCFD0"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_375_8655">
+                          <rect
+                            width="24"
+                            height="24"
+                            fill="white"
+                            transform="translate(0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </h4>
+                <div class="ac-text">
+                  <p>
+                    <br />
+                    Essayist is currently only available for macOS and iOS. Stay
+                    tuned our plans for Windows and Android.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul id="other-faq" class="faq-accordion-container list">
+              <li class="ac-faq">
+                <h4 class="faq-ac-title">
+                  Does Essayist have a User Guide?
+                  <button type="button" class="ac-trigger">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="24"
+                      viewBox="0 0 25 24"
+                      fill="none"
+                    >
+                      <g clip-path="url(#clip0_375_8655)">
+                        <path
+                          d="M12.5061 3.09753C11.9545 3.09753 11.509 3.543 11.509 4.09455L11.502 11.003L4.58646 11.003C4.03492 11.003 3.58944 11.4485 3.58944 12C3.58944 12.5515 4.03492 12.997 4.58646 12.997L11.502 12.997L11.502 19.9125C11.502 20.4641 11.9474 20.9095 12.499 20.9095C13.0505 20.9095 13.496 20.4641 13.496 19.9125L13.496 12.997L20.4115 12.997C20.9631 12.997 21.4085 12.5515 21.4085 12C21.4085 11.4485 20.9631 11.003 20.4115 11.003L13.496 11.003L13.496 4.08748C13.496 3.55008 13.0435 3.09753 12.5061 3.09753Z"
+                          fill="#CDCFD0"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_375_8655">
+                          <rect
+                            width="24"
+                            height="24"
+                            fill="white"
+                            transform="translate(0.5)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </h4>
+                <div class="ac-text">
+                  <p>
+                    <br />
+                    Yes! Essayist’s User Guide can be found here.
+                  </p>
+                </div>
               </li>
             </ul>
             <!-- </div> -->

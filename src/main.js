@@ -75,46 +75,11 @@ document.addEventListener('click', event => {
 
 /* ------------- SWIPER ----------- */
 
-// const swiper = new Swiper('.tab-list-swiper', {
-//   modules: [Mousewheel],
-//   speed: 800,
-//   slidesPerView: 'auto',
-//   spaceBetween: 8,
-//   rewind: true,
-//   slideToClickedSlide: true,
-//   mousewheel: {
-//     invert: true,
-//   },
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 2.2,
-//       spaceBetween: 4,
-//       mousewheel: false,
-//     },
-//     400: {
-//       slidesPerView: 2.5,
-//       mousewheel: false,
-//     },
-//     421: {
-//       slidesPerView: 2.7,
-//       mousewheel: false,
-//     },
-//     500: {
-//       slidesPerView: 3,
-//       mousewheel: false,
-//     },
-//     600: {
-//       slidesPerView: 4,
-//     },
-//   },
-// });
-
 const swiper = new Swiper('.swiper-container', {
   modules: [Mousewheel, Scrollbar],
-  slidesPerView: 'auto', // Авто-ширина слайдів
-  spaceBetween: 10, // Відстань між кнопками
-  slideToClickedSlide: true, // Вільна прокрутка
-
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  slideToClickedSlide: true,
   mousewheel: {
     invert: true,
   },
@@ -124,76 +89,52 @@ const swiper = new Swiper('.swiper-container', {
     draggable: true,
     // dragSize: 'auto', // Можливість тягнути скролбар
   },
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 2,
-  //   },
-  //   375: {
-  //     slidesPerView: 2.5,
-  //   },
-
-  //   490: {
-  //     slidesPerView: 3.5,
-  //   },
-  //   620: {
-  //     slidesPerView: 4,
-  //   },
-  // },
 });
-
-const faqAccordion = document.querySelector('.faq-accordion-container');
 
 /* ------------- FAQ-ACCORDION ----------- */
 
-new Accordion(faqAccordion, {
-  duration: 600,
-  openOnInit: [0],
+document.addEventListener('DOMContentLoaded', () => {
+  const faqAccordions = document.querySelectorAll('.faq-accordion-container');
+  let firstAccordionInstance = null;
 
-  elementClass: 'ac-faq',
-  triggerClass: 'faq-ac-title',
-  panelClass: 'ac-text',
-  activeClass: 'is-active-faq',
+  faqAccordions.forEach((container, index) => {
+    const accordionInstance = new Accordion(container, {
+      duration: 600,
+      openOnInit: index === 0 ? [0] : [],
 
-  showMultiple: true,
+      elementClass: 'ac-faq',
+      triggerClass: 'faq-ac-title',
+      panelClass: 'ac-text',
+      activeClass: 'is-active-faq',
+
+      showMultiple: true,
+    });
+    if (index === 0) {
+      firstAccordionInstance = accordionInstance;
+    }
+    const switchButtons = document.querySelectorAll('.faq-item-btn');
+    switchButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        if (firstAccordionInstance) {
+          firstAccordionInstance.close(0);
+        }
+      });
+    });
+  });
 });
 
-// const swiperAboutme = new Swiper(swiperContainer, {
-//   wrapperClass: 'swiper-wrapper-aboutme',
-//   slideClass: 'swiper-slide-aboutme',
-//   slideActiveClass: 'swiper-slide-active-aboutme',
+/* ------------- FAQ-TAB ----------- */
 
-//   direction: 'horizontal',
-//   loop: true,
-//   modules: [Navigation, Keyboard],
+document.querySelectorAll('.faq-item-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    document
+      .querySelectorAll('.faq-item-btn')
+      .forEach(btn => btn.classList.remove('active'));
+    document
+      .querySelectorAll('.faq-accordion-container')
+      .forEach(content => content.classList.remove('active'));
 
-//   slidesPerView: 1,
-//   spaceBetween: 0,
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 2,
-//     },
-
-//     768: {
-//       slidesPerView: 3,
-//     },
-
-//     1440: {
-//       slidesPerView: 6,
-//     },
-//   },
-
-//   navigation: {
-//     nextEl: '.swiper-button-next-aboutme',
-//   },
-
-//   nested: true,
-
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: false,
-//   },
-// });
-
-// nextSlideBtnAMe.addEventListener('click', e => {
-//   swiperAboutme.slideNext();
-// });
+    document.getElementById(button.dataset.target).classList.add('active');
+    button.classList.add('active');
+  });
+});
