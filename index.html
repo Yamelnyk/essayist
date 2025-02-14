@@ -22,7 +22,7 @@
     <script type="module" crossorigin src="/essayist/index.js"></script>
     <link rel="modulepreload" crossorigin href="/essayist/assets/vendor-CscbBjr0.js">
     <link rel="stylesheet" crossorigin href="/essayist/assets/vendor-CiPnbcr6.css">
-    <link rel="stylesheet" crossorigin href="/essayist/assets/index-C8CV1MT2.css">
+    <link rel="stylesheet" crossorigin href="/essayist/assets/index-M-TtKcr_.css">
   </head>
   <body>
     <!-- HEADER -->
@@ -76,7 +76,10 @@
             <div class="introduction-tab-list-wrapper">
               <ul class="introduction-tab-list list">
                 <li class="introduction-tab-list-item">
-                  <button class="introduction-item-btn">
+                  <button
+                    class="introduction-item-btn active"
+                    data-target="introduction-mac"
+                  >
                     <svg width="24" height="24">
                       <use href="/essayist/assets/symbol-defs-BedEVplM.svg#icon-mac"></use>
                     </svg>
@@ -84,7 +87,10 @@
                   </button>
                 </li>
                 <li class="introduction-item">
-                  <button class="introduction-item-btn btn-iPhone">
+                  <button
+                    class="introduction-item-btn btn-iPhone"
+                    data-target="introduction-iphone"
+                  >
                     <svg width="24" height="24">
                       <use href="/essayist/assets/symbol-defs-BedEVplM.svg#icon-iPhone"></use>
                     </svg>
@@ -92,7 +98,10 @@
                   </button>
                 </li>
                 <li class="introduction-item">
-                  <button class="introduction-item-btn">
+                  <button
+                    class="introduction-item-btn"
+                    data-target="introduction-ipad"
+                  >
                     <svg width="24" height="24">
                       <use href="/essayist/assets/symbol-defs-BedEVplM.svg#icon-iPad"></use>
                     </svg>
@@ -108,23 +117,99 @@
                 />
               </a>
             </div>
+            <div id="introduction-mac" class="picture-container active">
+              <picture>
+                <source
+                  srcset="/essayist/assets/image-mac-desk-Hyvv6Ybk.png 1x, /essayist/assets/image-mac-desk@2x-aq-bJkGr.png 2x"
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="/essayist/assets/image-mac-mob-CCCoNyUo.png 1x, /essayist/assets/image-mac-mob@2x-DV6IwKZ3.png 2x"
+                  media="(max-width: 1023px)"
+                />
 
-            <picture>
-              <source
-                srcset="/essayist/assets/image-mac-desk-Hyvv6Ybk.png 1x, /essayist/assets/image-mac-desk@2x-aq-bJkGr.png 2x"
-                media="(min-width: 1024px)"
-              />
-              <source
-                srcset="/essayist/assets/image-mac-mob-CCCoNyUo.png 1x, /essayist/assets/image-mac-mob@2x-DV6IwKZ3.png 2x"
-                media="(max-width: 1023px)"
-              />
+                <img
+                  class="introduction-mac-img"
+                  src="/essayist/assets/image-mac-mob@2x-DV6IwKZ3.png"
+                  alt="example essay"
+                />
+              </picture>
+            </div>
+            <div id="introduction-iphone" class="picture-container iphone">
+              <div class="picture-wrapper left">
+                <picture>
+                  <source
+                    srcset="/essayist/assets/phone-left-desk-CRL_yWHY.png 1x, /essayist/assets/phone-left-desk@2x-CcjSqwzJ.png 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="/essayist/assets/phone-left-F0NtORnQ.png 1x, /essayist/assets/phone-left@2x-C2O0DqwY.png 2x"
+                    media="(max-width: 1023px)"
+                  />
 
-              <img
-                class="introduction-mac-img"
-                src="/essayist/assets/image-mac-mob@2x-DV6IwKZ3.png"
-                alt="example essay"
-              />
-            </picture>
+                  <img
+                    class="introduction-phone-img"
+                    src="/essayist/assets/phone-left-F0NtORnQ.png"
+                    alt="example phone"
+                  />
+                </picture>
+              </div>
+
+              <div class="picture-wrapper center">
+                <picture>
+                  <source
+                    srcset="/essayist/assets/phone-centr-desk-CpRZwgKc.png 1x, /essayist/assets/phone-centr-desk@2x-CKfXEvcA.png 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="/essayist/assets/phone-centr-DaUr5mTl.png 1x, /essayist/assets/phone-centr@2x-ChMkydtD.png 2x"
+                    media="(max-width: 1023px)"
+                  />
+
+                  <img
+                    class="introduction-phone-img"
+                    src="/essayist/assets/phone-centr-DaUr5mTl.png"
+                    alt="example phone"
+                  />
+                </picture>
+              </div>
+              <div class="picture-wrapper-right">
+                <picture>
+                  <source
+                    srcset="/essayist/assets/phone-right-desk-CzPv_Vy6.png 1x, /essayist/assets/phone-right-desk@2x-DYwXtNjW.png 2x"
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="/essayist/assets/phone-right-Clfm8PDO.png 1x, /essayist/assets/phone-right@2x-CBMDgvA7.png 2x"
+                    media="(max-width: 1023px)"
+                  />
+
+                  <img
+                    class="introduction-phone-img"
+                    src="/essayist/assets/phone-right-Clfm8PDO.png"
+                    alt="example phone"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div id="introduction-ipad" class="picture-container">
+              <picture>
+                <source
+                  srcset="/essayist/assets/ipad-desk-DefnTac8.png 1x, /essayist/assets/ipad-desk@2x-DWnFlTzC.png 2x"
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="/essayist/assets/ipad-CebWDKz2.png 1x, /essayist/assets/ipad@2x-BHnOyvwT.png 2x"
+                  media="(max-width: 1023px)"
+                />
+
+                <img
+                  class="introduction-mac-img"
+                  src="/essayist/assets/ipad-CebWDKz2.png"
+                  alt="example ipad"
+                />
+              </picture>
+            </div>
           </div>
 
           <ul class="introduction-awards-list list">
