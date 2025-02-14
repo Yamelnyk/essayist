@@ -73,7 +73,10 @@
             <div class="introduction-tab-list-wrapper">
               <ul class="introduction-tab-list list">
                 <li class="introduction-tab-list-item">
-                  <button class="introduction-item-btn">
+                  <button
+                    class="introduction-item-btn active"
+                    data-target="introduction-mac"
+                  >
                     <svg width="24" height="24">
                       <use href="./symbol-defs.svg#icon-mac"></use>
                     </svg>
@@ -81,7 +84,10 @@
                   </button>
                 </li>
                 <li class="introduction-item">
-                  <button class="introduction-item-btn btn-iPhone">
+                  <button
+                    class="introduction-item-btn btn-iPhone"
+                    data-target="introduction-iphone"
+                  >
                     <svg width="24" height="24">
                       <use href="./symbol-defs.svg#icon-iPhone"></use>
                     </svg>
@@ -89,7 +95,10 @@
                   </button>
                 </li>
                 <li class="introduction-item">
-                  <button class="introduction-item-btn">
+                  <button
+                    class="introduction-item-btn"
+                    data-target="introduction-ipad"
+                  >
                     <svg width="24" height="24">
                       <use href="./symbol-defs.svg#icon-iPad"></use>
                     </svg>
@@ -105,29 +114,129 @@
                 />
               </a>
             </div>
+            <div id="introduction-mac" class="picture-container active">
+              <picture>
+                <source
+                  srcset="
+                    ./img/introduction/image-mac-desk.png    1x,
+                    ./img/introduction/image-mac-desk@2x.png 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    ./img/introduction/image-mac-mob.png    1x,
+                    ./img/introduction/image-mac-mob@2x.png 2x
+                  "
+                  media="(max-width: 1023px)"
+                />
 
-            <picture>
-              <source
-                srcset="
-                  ./img/introduction/image-mac-desk.png    1x,
-                  ./img/introduction/image-mac-desk@2x.png 2x
-                "
-                media="(min-width: 1024px)"
-              />
-              <source
-                srcset="
-                  ./img/introduction/image-mac-mob.png    1x,
-                  ./img/introduction/image-mac-mob@2x.png 2x
-                "
-                media="(max-width: 1023px)"
-              />
+                <img
+                  class="introduction-mac-img"
+                  src="./img/introduction/image-mac-mob@2x.png"
+                  alt="example essay"
+                />
+              </picture>
+            </div>
+            <div id="introduction-iphone" class="picture-container iphone">
+              <div class="picture-wrapper left">
+                <picture>
+                  <source
+                    srcset="
+                      ./img/introduction/phone-left-desk.png    1x,
+                      ./img/introduction/phone-left-desk@2x.png 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/introduction/phone-left.png    1x,
+                      ./img/introduction/phone-left@2x.png 2x
+                    "
+                    media="(max-width: 1023px)"
+                  />
 
-              <img
-                class="introduction-mac-img"
-                src="./img/introduction/image-mac-mob@2x.png"
-                alt="example essay"
-              />
-            </picture>
+                  <img
+                    class="introduction-phone-img"
+                    src="./img/introduction/phone-left.png"
+                    alt="example phone"
+                  />
+                </picture>
+              </div>
+
+              <div class="picture-wrapper center">
+                <picture>
+                  <source
+                    srcset="
+                      ./img/introduction/phone-centr-desk.png    1x,
+                      ./img/introduction/phone-centr-desk@2x.png 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/introduction/phone-centr.png    1x,
+                      ./img/introduction/phone-centr@2x.png 2x
+                    "
+                    media="(max-width: 1023px)"
+                  />
+
+                  <img
+                    class="introduction-phone-img"
+                    src="./img/introduction/phone-centr.png"
+                    alt="example phone"
+                  />
+                </picture>
+              </div>
+              <div class="picture-wrapper-right">
+                <picture>
+                  <source
+                    srcset="
+                      ./img/introduction/phone-right-desk.png    1x,
+                      ./img/introduction/phone-right-desk@2x.png 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      ./img/introduction/phone-right.png    1x,
+                      ./img/introduction/phone-right@2x.png 2x
+                    "
+                    media="(max-width: 1023px)"
+                  />
+
+                  <img
+                    class="introduction-phone-img"
+                    src="./img/introduction/phone-right.png"
+                    alt="example phone"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div id="introduction-ipad" class="picture-container">
+              <picture>
+                <source
+                  srcset="
+                    ./img/introduction/ipad-desk.png    1x,
+                    ./img/introduction/ipad-desk@2x.png 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    ./img/introduction/ipad.png    1x,
+                    ./img/introduction/ipad@2x.png 2x
+                  "
+                  media="(max-width: 1023px)"
+                />
+
+                <img
+                  class="introduction-mac-img"
+                  src="./img/introduction/ipad.png"
+                  alt="example ipad"
+                />
+              </picture>
+            </div>
           </div>
 
           <ul class="introduction-awards-list list">

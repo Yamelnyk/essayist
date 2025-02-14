@@ -95,7 +95,7 @@ const swiper = new Swiper('.swiper-container', {
 
 document.addEventListener('DOMContentLoaded', () => {
   const faqAccordions = document.querySelectorAll('.faq-accordion-container');
-  let firstAccordionInstance = null;
+  const accordionInstances = [];
 
   faqAccordions.forEach((container, index) => {
     const accordionInstance = new Accordion(container, {
@@ -109,15 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       showMultiple: true,
     });
-    if (index === 0) {
-      firstAccordionInstance = accordionInstance;
-    }
-    const switchButtons = document.querySelectorAll('.faq-item-btn');
-    switchButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        if (firstAccordionInstance) {
-          firstAccordionInstance.close(0);
-        }
+    accordionInstances.push(accordionInstance);
+  });
+  const switchButtons = document.querySelectorAll('.faq-item-btn');
+  switchButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      accordionInstances.forEach(instance => {
+        instance.closeAll();
       });
     });
   });
@@ -132,6 +130,20 @@ document.querySelectorAll('.faq-item-btn').forEach(button => {
       .forEach(btn => btn.classList.remove('active'));
     document
       .querySelectorAll('.faq-accordion-container')
+      .forEach(content => content.classList.remove('active'));
+
+    document.getElementById(button.dataset.target).classList.add('active');
+    button.classList.add('active');
+  });
+});
+
+document.querySelectorAll('.introduction-item-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    document
+      .querySelectorAll('.introduction-item-btn')
+      .forEach(btn => btn.classList.remove('active'));
+    document
+      .querySelectorAll('.picture-container')
       .forEach(content => content.classList.remove('active'));
 
     document.getElementById(button.dataset.target).classList.add('active');

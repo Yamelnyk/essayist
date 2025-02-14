@@ -325,6 +325,14 @@ input {
 
 /* ----------INTRODUCTION-------------- */
 
+.picture-container {
+  display: none;
+}
+
+.picture-container.active {
+  display: flex;
+}
+
 .section {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -394,7 +402,7 @@ input {
 
 .introduction-item-btn:hover,
 .introduction-item-btn:focus,
-.introduction-item-btn:active {
+.introduction-item-btn.active {
   background-color: #fff;
   fill: #007aff;
   color: #007aff;
@@ -452,6 +460,11 @@ input {
 
 .download-on-app-store-desk {
   display: none;
+}
+
+.picture-wrapper.center {
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -520,6 +533,13 @@ input {
   .awards-branch {
     width: 1.9rem;
     height: 5rem;
+  }
+  .picture-wrapper.center {
+    margin-top: 60px;
+  }
+  .picture-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
