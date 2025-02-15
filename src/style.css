@@ -180,6 +180,16 @@ input {
     color: #fff;
     line-height: 150%;
   }
+
+  .btn-download-app:hover,
+  .btn-download-app:focus {
+    background: #141f37;
+    transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-download-app:active {
+    background: #071013;
+  }
   .nav {
     display: block;
   }
@@ -187,8 +197,8 @@ input {
   .nav-list {
     display: flex;
     align-items: center;
-    padding-left: 0.125rem;
-    padding-right: 0.125rem;
+    padding: 2px 3px;
+    /* padding-right: 0.125rem; */
     border-radius: 16px;
     border: 1px solid #e6e7e7;
     line-height: 150%;
@@ -226,7 +236,6 @@ input {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
-  /* background-color: #fafbfc; */
   background-size: cover;
   transform: translateX(200%);
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -409,6 +418,7 @@ input {
   background-color: #fff;
   fill: #007aff;
   color: #007aff;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .introduction-tab-list {
@@ -1434,6 +1444,7 @@ input {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-content {
@@ -1652,6 +1663,7 @@ input {
 .faq-item-btn.active {
   color: #fff;
   background: linear-gradient(180deg, #007aff 0%, #4575ee 100%);
+  transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-accordion-container {
@@ -1718,10 +1730,15 @@ input {
   width: 70px;
   margin-top: 32px;
 }
-.email-button:hover,
-.email-button:active {
+.email-button:hover {
+  border: none;
   color: #fff;
-  background-color: #007aff;
+  background-color: #141f37;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-button:active {
+  background-color: #071013;
 }
 .faq-accordion-container.active {
   display: flex;
@@ -1829,7 +1846,16 @@ input {
   box-shadow: 0px 4px 4px 0px #00000026;
   outline: 0;
 }
-
+/*
+.email-area-input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
+.email-area-input:hover,
+.email-area-input:active,
+.email-area-input:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+}
 .email-area-input::placeholder {
   color: #fff;
 }
@@ -1850,6 +1876,29 @@ input {
   width: 83px;
 }
 
+.subscribe-button:hover {
+  border: none;
+  color: #fff;
+  background: #141f37;
+  transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-button:active {
+  background: #071013;
+}
+
+.back-btn {
+  margin-top: 16px;
+  min-width: 106px;
+}
+
+.subscribed-text {
+  color: #fff;
+  font-size: 15px;
+  line-height: 150%;
+  max-width: 400px;
+}
+
 @media screen and (min-width: 600px) {
   .subscribe-form {
     flex-direction: row;
@@ -1862,6 +1911,7 @@ input {
 
 @media screen and (min-width: 930px) {
   .subscribe-section-container {
+    border-radius: 40px;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-around;
@@ -1884,6 +1934,14 @@ input {
   .subscribe-title {
     font-size: 48px;
   }
+
+  .subscribed-text {
+    font-size: 17px;
+    max-width: 511px;
+  }
+  .back-btn {
+    margin-left: 50px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1893,13 +1951,7 @@ input {
   }
 }
 
-.back-btn {
-  margin-top: 16px;
-  min-width: 106px;
-}
-
-.subscribed-text {
-  color: #fff;
-  font-size: 15px;
-  line-height: 150%;
+.nav-link.current {
+  border-radius: 14px;
+  background: #fff;
 }
