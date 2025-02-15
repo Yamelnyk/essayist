@@ -137,6 +137,8 @@ document.querySelectorAll('.faq-item-btn').forEach(button => {
   });
 });
 
+/* ------------- INTRODUCTION-TAB ----------- */
+
 document.querySelectorAll('.introduction-item-btn').forEach(button => {
   button.addEventListener('click', () => {
     document
@@ -148,5 +150,39 @@ document.querySelectorAll('.introduction-item-btn').forEach(button => {
 
     document.getElementById(button.dataset.target).classList.add('active');
     button.classList.add('active');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('.subscribe-form');
+  const container = document.querySelector('.subscribe-section-container');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Запобігаємо перезавантаженню сторінки
+
+    const emailInput = document.querySelector('.email-area-input');
+    const emailValue = emailInput.value.trim();
+
+    if (!emailValue) return;
+
+    container.innerHTML = `
+        <h2 class="subscribe-title section-title">
+          Great! <br />
+          Thank you!
+        </h2>
+        <div class="subscribe-wrap">
+          <p class="subscribed-text">
+            You have successfully subscribed to the latest updates and news
+            from our app and be the first to know about all the news.
+          </p>
+          <button class="subscribe-button back-btn" type="button">
+            Back
+          </button>
+        </div>
+      `;
+
+    document.querySelector('.back-btn').addEventListener('click', function () {
+      location.reload();
+    });
   });
 });
