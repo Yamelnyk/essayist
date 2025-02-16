@@ -3,7 +3,7 @@ import{S as i,M as a,a as d,A as u}from"./assets/vendor-CscbBjr0.js";(function()
           Great! <br />
           Thank you!
         </h2>
-        <div class="subscribe-wrap">
+        <div class="subscribe-form">
           <p class="subscribed-text">
             You have successfully subscribed to the latest updates and news
             from our app and be the first to know about all the news.
