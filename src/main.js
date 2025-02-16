@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
           Great! <br />
           Thank you!
         </h2>
-        <div class="subscribe-wrap">
+        <div class="subscribe-form">
           <p class="subscribed-text">
             You have successfully subscribed to the latest updates and news
             from our app and be the first to know about all the news.
