@@ -224,3 +224,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   updateActiveNav();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const icons = document.querySelectorAll('.introduction-ico');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = `fadeInUp 0.8s ease-out forwards`;
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  icons.forEach(icon => observer.observe(icon));
+});
