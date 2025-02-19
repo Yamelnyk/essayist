@@ -2224,11 +2224,11 @@ input {
     height: 32px;
   }
   .introduction-ico-1 {
-    inset: 100px auto auto 16%;
+    inset: 120px auto auto 16%;
   }
 
   .introduction-ico-2 {
-    inset: 275px auto auto 9%;
+    inset: 300px auto auto 9%;
   }
 
   .introduction-ico-3 {
@@ -2239,11 +2239,11 @@ input {
     inset: 830px auto auto 9%;
   }
   .introduction-ico-5 {
-    inset: 100px 16% auto auto;
+    inset: 130px 16% auto auto;
   }
 
   .introduction-ico-6 {
-    inset: 290px 9% auto auto;
+    inset: 310px 9% auto auto;
   }
   .introduction-ico-7 {
     inset: 560px 5% auto auto;
@@ -2253,9 +2253,31 @@ input {
   }
 }
 
+/* Для .introduction-ico: з'являється вгору + вбік */
+/* Для works-icon: з’являються по черзі */
+.works-icon {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-play-state: paused; /* За замовчуванням анімація вимкнена */
+}
+
+.works-icon:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.works-icon:nth-child(2) {
+  animation-delay: 0.9s;
+}
+.works-icon:nth-child(3) {
+  animation-delay: 1.8s;
+}
+
+/* Для .introduction-ico: з'являються вгору + вбік */
 .introduction-ico {
   opacity: 0;
   transform: translateY(30px) translateX(var(--x-offset, 0));
+  animation: fadeInUpSide 0.8s ease-out 1s forwards;
+  animation-play-state: paused;
 }
 
 .introduction-ico-1,
@@ -2272,7 +2294,16 @@ input {
   --x-offset: -30px;
 }
 
-@keyframes fadeInUp {
+/* Для .picture-container: тільки вгору */
+.picture-container {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  animation-play-state: paused;
+}
+
+/* Анімації */
+@keyframes fadeInUpSide {
   from {
     opacity: 0;
     transform: translateY(30px) translateX(var(--x-offset, 0));
@@ -2280,5 +2311,16 @@ input {
   to {
     opacity: 1;
     transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

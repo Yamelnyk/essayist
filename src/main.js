@@ -227,12 +227,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', () => {
   const icons = document.querySelectorAll('.introduction-ico');
+  const pictures = document.querySelectorAll('.picture-container');
+  const worksIcons = document.querySelectorAll('.works-icon');
 
   const observer = new IntersectionObserver(
     entries => {
-      entries.forEach((entry, index) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.animation = `fadeInUp 0.8s ease-out forwards`;
+          entry.target.style.animationPlayState = 'running';
         }
       });
     },
@@ -240,4 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   icons.forEach(icon => observer.observe(icon));
+  pictures.forEach(picture => observer.observe(picture));
+  worksIcons.forEach(icon => observer.observe(icon));
 });
