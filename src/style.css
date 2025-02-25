@@ -2272,8 +2272,14 @@ input {
   animation-delay: 1.8s;
 }
 
+.works-icon.visible {
+  animation-play-state: running;
+}
+
 /* Для .introduction-ico: з'являються вгору + вбік */
-.introduction-ico {
+.introduction-ico,
+.pink-ico,
+.violet-ico {
   opacity: 0;
   transform: translateY(30px) translateX(var(--x-offset, 0));
   animation: fadeInUpSide 0.8s ease-out 1s forwards;
@@ -2283,14 +2289,20 @@ input {
 .introduction-ico-1,
 .introduction-ico-2,
 .introduction-ico-3,
-.introduction-ico-4 {
+.introduction-ico-4,
+.pink-ico-2,
+.pink-ico-3,
+.violet-ico-2,
+.violet-ico-3 {
   --x-offset: 30px;
 }
 
 .introduction-ico-5,
 .introduction-ico-6,
 .introduction-ico-7,
-.introduction-ico-8 {
+.introduction-ico-8,
+.pink-ico-1,
+.violet-ico-1 {
   --x-offset: -30px;
 }
 
@@ -2300,6 +2312,69 @@ input {
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out 0.2s forwards;
   animation-play-state: paused;
+}
+
+.works-block-pink,
+.works-block-violet {
+  position: relative;
+}
+.pink-ico-box,
+.violet-ico-box {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+.pink-ico,
+.violet-ico {
+  position: absolute;
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+}
+
+.pink-ico-1 {
+  inset: 15% 5% auto auto;
+}
+.pink-ico-2 {
+  inset: 7% auto auto 5%;
+}
+.pink-ico-3 {
+  inset: auto auto 7% 5%;
+}
+
+.violet-ico-1 {
+  inset: 7% 5% auto auto;
+}
+.violet-ico-2 {
+  inset: 15% auto auto 3%;
+}
+.violet-ico-3 {
+  inset: auto auto 7% 5%;
+}
+@media screen and (min-width: 768px) {
+  .pink-ico,
+  .violet-ico {
+    width: 24px;
+    height: 24px;
+  }
+  .pink-ico-1 {
+    right: 3%;
+  }
+  .pink-ico-2 {
+    left: 3%;
+  }
+  .pink-ico-3 {
+    left: 3%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .pink-ico {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 /* Анімації */

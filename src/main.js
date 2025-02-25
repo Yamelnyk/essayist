@@ -228,7 +228,10 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', () => {
   const icons = document.querySelectorAll('.introduction-ico');
   const pictures = document.querySelectorAll('.picture-container');
-  const worksIcons = document.querySelectorAll('.works-icon');
+  const violetIcons = document.querySelectorAll('.violet-ico');
+  const pinkIcons = document.querySelectorAll('.pink-ico');
+
+  // const worksIcons = document.querySelectorAll('.works-icon');
 
   const observer = new IntersectionObserver(
     entries => {
@@ -243,5 +246,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   icons.forEach(icon => observer.observe(icon));
   pictures.forEach(picture => observer.observe(picture));
+  violetIcons.forEach(violetIcon => observer.observe(violetIcon));
+  pinkIcons.forEach(pinkIcon => observer.observe(pinkIcon));
+
+  // worksIcons.forEach(icon => observer.observe(icon));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const worksIcons = document.querySelectorAll('.works-icon');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 400); // Кожен наступний з'явиться із затримкою 700ms
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
   worksIcons.forEach(icon => observer.observe(icon));
 });
