@@ -231,13 +231,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const violetIcons = document.querySelectorAll('.violet-ico');
   const pinkIcons = document.querySelectorAll('.pink-ico');
   const citationsIcons = document.querySelectorAll('.citations-ico');
-
-  // const reference = document.querySelector('.works-references');
-  // const pin = document.querySelector('.works-references-pin');
-  // const library = document.querySelector('.works-library');
-  // const libraryPin = document.querySelector('.works-library-pin');
-
-  // const worksIcons = document.querySelectorAll('.works-icon');
+  const referenceImg = document.querySelector('.reference-type-img');
+  const referenceImgWrapper = document.querySelector(
+    '.reference-img-wrapper-big'
+  );
+  const referenceLetter = document.querySelector('.reference-letter-wrapper');
+  const pricingIcons = document.querySelectorAll('.pricing-ico');
 
   const observer = new IntersectionObserver(
     entries => {
@@ -255,16 +254,16 @@ document.addEventListener('DOMContentLoaded', () => {
   violetIcons.forEach(violetIcon => observer.observe(violetIcon));
   pinkIcons.forEach(pinkIcon => observer.observe(pinkIcon));
   citationsIcons.forEach(citationsIcon => observer.observe(citationsIcon));
-  // if (reference) observer.observe(reference);
-  // if (pin) observer.observe(pin);
-  // if (library) observer.observe(library);
-  // if (libraryPin) observer.observe(libraryPin);
+  observer.observe(referenceImg);
 
-  // worksIcons.forEach(icon => observer.observe(icon));
+  observer.observe(referenceImgWrapper);
+  observer.observe(referenceLetter);
+  pricingIcons.forEach(pricingIcon => observer.observe(pricingIcon));
 });
 
 document.addEventListener('DOMContentLoaded', () => {
   const worksIcons = document.querySelectorAll('.works-icon');
+  const featuresIcons = document.querySelectorAll('.features-icon');
 
   const observer = new IntersectionObserver(
     entries => {
@@ -272,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entry.isIntersecting) {
           setTimeout(() => {
             entry.target.classList.add('visible');
-          }, index * 400); // Кожен наступний з'явиться із затримкою 700ms
+          }, index * 400);
         }
       });
     },
@@ -280,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   worksIcons.forEach(icon => observer.observe(icon));
+  featuresIcons.forEach(featuresIcon => observer.observe(featuresIcon));
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -287,12 +287,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const pin = document.querySelector('.works-references-pin');
   const libraries = document.querySelectorAll('.works-library');
   const libraryPin = document.querySelector('.works-library-pin');
+  const featuresIconsSvg = document.querySelectorAll('.features-ico');
+  const faqIcons = document.querySelectorAll('.faq-ico');
 
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate'); // Додаємо клас, який запускає анімацію
+          entry.target.classList.add('animate');
         }
       });
     },
@@ -303,6 +305,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (pin) observer.observe(pin);
   if (libraries) libraries.forEach(library => observer.observe(library));
   if (libraryPin) observer.observe(libraryPin);
+  if (featuresIconsSvg)
+    featuresIconsSvg.forEach(featuresIconSvg =>
+      observer.observe(featuresIconSvg)
+    );
+  if (faqIcons) faqIcons.forEach(faqIcon => observer.observe(faqIcon));
 
   elements.forEach(el => observer.observe(el));
 });

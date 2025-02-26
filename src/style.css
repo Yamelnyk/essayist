@@ -2255,24 +2255,29 @@ input {
 
 /* Для .introduction-ico: з'являється вгору + вбік */
 /* Для works-icon: з’являються по черзі */
-.works-icon {
+.works-icon,
+.features-icon {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;
   animation-play-state: paused; /* За замовчуванням анімація вимкнена */
 }
 
-.works-icon:nth-child(1) {
+.works-icon:nth-child(1),
+.features-icon:nth-child(1) {
   animation-delay: 0.2s;
 }
-.works-icon:nth-child(2) {
+.works-icon:nth-child(2),
+.features-icon:nth-child(2) {
   animation-delay: 0.9s;
 }
-.works-icon:nth-child(3) {
+.works-icon:nth-child(3),
+.features-icon:nth-child(3) {
   animation-delay: 1.8s;
 }
 
-.works-icon.visible {
+.works-icon.visible,
+.features-icon.visible {
   animation-play-state: running;
 }
 
@@ -2280,7 +2285,8 @@ input {
 .introduction-ico,
 .pink-ico,
 .violet-ico,
-.citations-ico {
+.citations-ico,
+.pricing-ico {
   opacity: 0;
   transform: translateY(30px) translateX(var(--x-offset, 0));
   animation: fadeInUpSide 1s ease-out 1s forwards;
@@ -2300,7 +2306,10 @@ input {
 .citations-ico-3,
 .green-ico-1,
 .green-ico-2,
-.orange-ico-1 {
+.orange-ico-1,
+.pricing-ico-1,
+.pricing-ico-2,
+.pricing-ico-3 {
   --x-offset: 30px;
 }
 
@@ -2315,12 +2324,18 @@ input {
 .citations-ico-6,
 .citations-ico-7,
 .green-ico-3,
-.orange-ico-2 {
+.orange-ico-2,
+.pricing-ico-4,
+.pricing-ico-5,
+.pricing-ico-6 {
   --x-offset: -30px;
 }
 
 /* Для .picture-container: тільки вгору */
-.picture-container {
+.picture-container,
+.reference-type-img,
+.reference-img-wrapper-big,
+.reference-letter-wrapper {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out 0.2s forwards;
@@ -2421,7 +2436,9 @@ input {
 .works-references,
 .works-library,
 .works-references-pin,
-.works-library-pin {
+.works-library-pin,
+.features-ico,
+.faq-ico {
   opacity: 0;
   transform: scale(0.5);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -2429,7 +2446,9 @@ input {
 
 /* Коли додається клас "animate", запускаємо анімацію */
 .works-references.animate,
-.works-library.animate {
+.works-library.animate,
+.features-ico.animate,
+.faq-ico.animate {
   opacity: 1;
   transform: scale(1);
 }
@@ -2578,11 +2597,19 @@ input {
   }
 }
 
-.features-section-container {
+.features-section-container,
+.reviews-section-container,
+.pricing-section-container,
+.faq-section-container,
+.subscribe-section-container {
   position: relative;
 }
 
-.features-ico-box {
+.features-ico-box,
+.reviews-ico-box,
+.pricing-ico-box,
+.faq-svg-box,
+.subscribe-svg-box {
   pointer-events: none;
   position: absolute;
   height: 100%;
@@ -2602,7 +2629,13 @@ input {
 }
   */
 
-.features-ico {
+.pricing-ico-box {
+  display: none;
+}
+
+.features-ico,
+.pricing-ico,
+.faq-ico {
   position: absolute;
   fill: #fff;
   width: 16px;
@@ -2614,16 +2647,208 @@ input {
 }
 
 .features-ico-2 {
-  top: 10%;
+  top: 8%;
   left: 7%;
 }
 
 .features-ico-4 {
-  right: 15%;
-  top: 30%;
+  right: 12%;
+  top: 31%;
 }
 
 .features-ico-5 {
   left: 5%;
-  top: 39%;
+  top: 40%;
+}
+
+.features-ico-6 {
+  right: 12%;
+  top: 52.5%;
+}
+
+.features-ico-7 {
+  left: 5%;
+  top: 61%;
+}
+
+.features-ico-8 {
+  right: 10%;
+  bottom: 26%;
+}
+
+.features-ico-10 {
+  right: 10%;
+  top: -2%;
+}
+
+@media screen and (min-width: 768px) {
+  .pricing-ico-box {
+    display: block;
+    top: 0;
+  }
+  .features-ico,
+  .pricing-ico,
+  .faq-ico {
+    width: 24px;
+    height: 24px;
+  }
+
+  .features-ico-2 {
+    top: 28%;
+  }
+  .features-ico-4 {
+    right: 20%;
+    top: 23%;
+  }
+  .features-ico-5 {
+    left: 14%;
+    top: 47%;
+  }
+
+  .features-ico-6 {
+    right: 25%;
+    top: 46%;
+  }
+
+  .features-ico-7 {
+    left: 42%;
+    top: 49%;
+  }
+  .features-ico-8 {
+    bottom: 35%;
+  }
+
+  .features-ico-10 {
+    right: 7%;
+    top: 2%;
+  }
+
+  .pricing-ico-1 {
+    top: 20%;
+    left: 10%;
+  }
+  .pricing-ico-2 {
+    top: 50%;
+    left: 5%;
+  }
+
+  .pricing-ico-3 {
+    bottom: 20%;
+    left: 10%;
+  }
+  .pricing-ico-4 {
+    top: 20%;
+    right: 10%;
+  }
+  .pricing-ico-5 {
+    top: 50%;
+    right: 5%;
+  }
+
+  .pricing-ico-6 {
+    bottom: 20%;
+    right: 10%;
+    fill: #fff;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .features-ico,
+  .pricing-ico,
+  .faq-ico {
+    width: 32px;
+    height: 32px;
+  }
+
+  .features-ico-2 {
+    top: 24%;
+  }
+  .features-ico-4 {
+    top: 20%;
+  }
+
+  .features-ico-5 {
+    top: 40%;
+  }
+  .features-ico-7 {
+    top: 42%;
+  }
+
+  .pricing-ico-6 {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 436px) {
+  .faq-ico-arrow {
+    position: absolute;
+    width: 70px;
+    height: 50px;
+    fill: #fff;
+    transform: rotate(-100deg);
+    right: 10%;
+    top: 5%;
+  }
+}
+
+@media screen and ((min-width: 437px) and (max-width: 899px)) {
+  .faq-ico-arrow {
+    display: none;
+  }
+}
+
+.faq-ico-1,
+.faq-ico-2 {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .faq-ico-1,
+  .faq-ico-2,
+  .faq-ico-arrow {
+    display: block;
+  }
+
+  .faq-ico-1 {
+    bottom: 40%;
+    left: 10%;
+    fill: rgba(205, 207, 208, 1);
+  }
+  .faq-ico-2 {
+    bottom: 25%;
+    left: 50%;
+    fill: rgba(205, 207, 208, 1);
+  }
+  .faq-ico-arrow {
+    position: absolute;
+    bottom: 45%;
+    left: 35%;
+    width: 70px;
+    height: 70px;
+    transform: scale(-1, 1) rotate(40deg);
+  }
+}
+.subscribe-svg-box {
+  top: 0;
+}
+.subscribe-ico-1 {
+  right: 8%;
+  top: 20%;
+}
+.subscribe-ico-2 {
+  right: 25%;
+  bottom: 15%;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-ico-1 {
+    right: 60%;
+    top: 25%;
+  }
+  .subscribe-ico-2 {
+    right: 10%;
+    bottom: 70%;
+  }
 }
