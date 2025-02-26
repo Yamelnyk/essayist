@@ -230,6 +230,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const pictures = document.querySelectorAll('.picture-container');
   const violetIcons = document.querySelectorAll('.violet-ico');
   const pinkIcons = document.querySelectorAll('.pink-ico');
+  const citationsIcons = document.querySelectorAll('.citations-ico');
+
+  // const reference = document.querySelector('.works-references');
+  // const pin = document.querySelector('.works-references-pin');
+  // const library = document.querySelector('.works-library');
+  // const libraryPin = document.querySelector('.works-library-pin');
 
   // const worksIcons = document.querySelectorAll('.works-icon');
 
@@ -248,6 +254,11 @@ document.addEventListener('DOMContentLoaded', () => {
   pictures.forEach(picture => observer.observe(picture));
   violetIcons.forEach(violetIcon => observer.observe(violetIcon));
   pinkIcons.forEach(pinkIcon => observer.observe(pinkIcon));
+  citationsIcons.forEach(citationsIcon => observer.observe(citationsIcon));
+  // if (reference) observer.observe(reference);
+  // if (pin) observer.observe(pin);
+  // if (library) observer.observe(library);
+  // if (libraryPin) observer.observe(libraryPin);
 
   // worksIcons.forEach(icon => observer.observe(icon));
 });
@@ -269,4 +280,29 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   worksIcons.forEach(icon => observer.observe(icon));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const references = document.querySelectorAll('.works-references');
+  const pin = document.querySelector('.works-references-pin');
+  const libraries = document.querySelectorAll('.works-library');
+  const libraryPin = document.querySelector('.works-library-pin');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate'); // Додаємо клас, який запускає анімацію
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  if (references) references.forEach(reference => observer.observe(reference));
+  if (pin) observer.observe(pin);
+  if (libraries) libraries.forEach(library => observer.observe(library));
+  if (libraryPin) observer.observe(libraryPin);
+
+  elements.forEach(el => observer.observe(el));
 });

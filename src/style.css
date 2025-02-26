@@ -2279,10 +2279,11 @@ input {
 /* Для .introduction-ico: з'являються вгору + вбік */
 .introduction-ico,
 .pink-ico,
-.violet-ico {
+.violet-ico,
+.citations-ico {
   opacity: 0;
   transform: translateY(30px) translateX(var(--x-offset, 0));
-  animation: fadeInUpSide 0.8s ease-out 1s forwards;
+  animation: fadeInUpSide 1s ease-out 1s forwards;
   animation-play-state: paused;
 }
 
@@ -2293,7 +2294,13 @@ input {
 .pink-ico-2,
 .pink-ico-3,
 .violet-ico-2,
-.violet-ico-3 {
+.violet-ico-3,
+.citations-ico-1,
+.citations-ico-2,
+.citations-ico-3,
+.green-ico-1,
+.green-ico-2,
+.orange-ico-1 {
   --x-offset: 30px;
 }
 
@@ -2302,7 +2309,13 @@ input {
 .introduction-ico-7,
 .introduction-ico-8,
 .pink-ico-1,
-.violet-ico-1 {
+.violet-ico-1,
+.citations-ico-4,
+.citations-ico-5,
+.citations-ico-6,
+.citations-ico-7,
+.green-ico-3,
+.orange-ico-2 {
   --x-offset: -30px;
 }
 
@@ -2319,7 +2332,10 @@ input {
   position: relative;
 }
 .pink-ico-box,
-.violet-ico-box {
+.violet-ico-box,
+.citations-ico-box,
+.green-ico-box,
+.orange-ico-box {
   pointer-events: none;
   position: absolute;
   height: 100%;
@@ -2327,7 +2343,8 @@ input {
   left: 0;
 }
 .pink-ico,
-.violet-ico {
+.violet-ico,
+.citations-ico {
   position: absolute;
   fill: #fff;
   width: 16px;
@@ -2398,4 +2415,215 @@ input {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Початковий стан (ховаємо без анімації) */
+.works-references,
+.works-library,
+.works-references-pin,
+.works-library-pin {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Коли додається клас "animate", запускаємо анімацію */
+.works-references.animate,
+.works-library.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.works-references-pin.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.works-library-pin.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* .citations-add-pin.animate {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+.citations-section-container {
+  position: relative;
+}
+
+.citations-ico-4,
+.citations-ico-6 {
+  display: none;
+}
+
+.citations-ico-3 {
+  inset: 4% auto auto 5%;
+}
+
+.citations-ico-5 {
+  inset: 5% 6% auto auto;
+}
+
+.citations-ico-7 {
+  inset: auto 7% 15% auto;
+}
+
+.citations-ico-2 {
+  inset: auto 45% 13% auto;
+}
+
+.citations-ico-1 {
+  inset: auto auto 16% 5%;
+}
+
+@media screen and (min-width: 768px) {
+  .citations-ico {
+    width: 24px;
+    height: 24px;
+  }
+  .citations-ico-3 {
+    top: -4%;
+  }
+
+  .citations-ico-5 {
+    top: 3%;
+  }
+
+  .citations-ico-7 {
+    bottom: 20%;
+  }
+
+  .citations-ico-2 {
+    bottom: 17%;
+  }
+
+  .citations-ico-1 {
+    bottom: 22%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .citations-ico {
+    width: 32px;
+    height: 32px;
+  }
+
+  .citations-ico-1 {
+    inset: 5% auto auto 12%;
+  }
+
+  .citations-ico-2 {
+    inset: 40% auto auto 7%;
+  }
+
+  .citations-ico-3 {
+    inset: auto auto 22% 13%;
+  }
+  .citations-ico-4 {
+    display: block;
+    inset: -5% 17% auto auto;
+  }
+  .citations-ico-5 {
+    inset: 17% 10% auto auto;
+  }
+
+  .citations-ico-6 {
+    display: block;
+    inset: auto 7% 55% auto;
+  }
+
+  .citations-ico-7 {
+    display: block;
+    inset: auto 13% 25% auto;
+  }
+}
+
+.citations-block-color {
+  position: relative;
+}
+
+.green-ico-1 {
+  inset: 20% auto auto 5%;
+}
+.green-ico-2 {
+  inset: 85% auto auto 3%;
+}
+.green-ico-3 {
+  inset: 12% 5% auto auto;
+}
+
+.orange-ico-1 {
+  inset: 30% auto auto 5%;
+}
+
+.orange-ico-2 {
+  inset: 13% 5% auto auto;
+}
+
+@media screen and (min-width: 768px) {
+  .green-ico-1 {
+    left: 3%;
+  }
+  .green-ico-3 {
+    right: 3%;
+  }
+  .orange-ico-1 {
+    left: 3%;
+  }
+
+  .orange-ico-2 {
+    right: 3%;
+  }
+}
+
+.features-section-container {
+  position: relative;
+}
+
+.features-ico-box {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+/* .features-ico {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.features-ico.animate {
+  opacity: 1;
+  transform: scale(1);
+}
+  */
+
+.features-ico {
+  position: absolute;
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+}
+
+.features-ico-1 {
+  right: 10%;
+}
+
+.features-ico-2 {
+  top: 10%;
+  left: 7%;
+}
+
+.features-ico-4 {
+  right: 15%;
+  top: 30%;
+}
+
+.features-ico-5 {
+  left: 5%;
+  top: 39%;
 }
