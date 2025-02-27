@@ -226,90 +226,39 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const icons = document.querySelectorAll('.introduction-ico');
-  const pictures = document.querySelectorAll('.picture-container');
-  const violetIcons = document.querySelectorAll('.violet-ico');
-  const pinkIcons = document.querySelectorAll('.pink-ico');
-  const citationsIcons = document.querySelectorAll('.citations-ico');
-  const referenceImg = document.querySelector('.reference-type-img');
-  const referenceImgWrapper = document.querySelector(
-    '.reference-img-wrapper-big'
-  );
-  const referenceLetter = document.querySelector('.reference-letter-wrapper');
-  const pricingIcons = document.querySelectorAll('.pricing-ico');
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  icons.forEach(icon => observer.observe(icon));
-  pictures.forEach(picture => observer.observe(picture));
-  violetIcons.forEach(violetIcon => observer.observe(violetIcon));
-  pinkIcons.forEach(pinkIcon => observer.observe(pinkIcon));
-  citationsIcons.forEach(citationsIcon => observer.observe(citationsIcon));
-  observer.observe(referenceImg);
-
-  observer.observe(referenceImgWrapper);
-  observer.observe(referenceLetter);
-  pricingIcons.forEach(pricingIcon => observer.observe(pricingIcon));
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const worksIcons = document.querySelectorAll('.works-icon');
-  const featuresIcons = document.querySelectorAll('.features-icon');
+  const elementsToObserve = [
+    ...document.querySelectorAll(
+      '.introduction-ico, .picture-container, .violet-ico, .pink-ico, .citations-ico, .pricing-ico, .works-icon, .features-icon, .works-references, .works-library, .features-ico, .faq-ico'
+    ),
+    document.querySelector('.reference-type-img'),
+    document.querySelector('.reference-img-wrapper-big'),
+    document.querySelector('.reference-letter-wrapper'),
+    document.querySelector('.pricing-item-flex'),
+    document.querySelector('.works-references-pin'),
+    document.querySelector('.works-library-pin'),
+  ].filter(Boolean);
 
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, index * 400);
+          if (
+            entry.target.classList.contains('works-icon') ||
+            entry.target.classList.contains('features-icon')
+          ) {
+            setTimeout(
+              () => entry.target.classList.add('visible'),
+              index * 400
+            );
+          } else {
+            entry.target.style.animationPlayState = 'running';
+            entry.target.classList.add('animate');
+          }
         }
       });
     },
     { threshold: 0.3 }
   );
 
-  worksIcons.forEach(icon => observer.observe(icon));
-  featuresIcons.forEach(featuresIcon => observer.observe(featuresIcon));
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const references = document.querySelectorAll('.works-references');
-  const pin = document.querySelector('.works-references-pin');
-  const libraries = document.querySelectorAll('.works-library');
-  const libraryPin = document.querySelector('.works-library-pin');
-  const featuresIconsSvg = document.querySelectorAll('.features-ico');
-  const faqIcons = document.querySelectorAll('.faq-ico');
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  if (references) references.forEach(reference => observer.observe(reference));
-  if (pin) observer.observe(pin);
-  if (libraries) libraries.forEach(library => observer.observe(library));
-  if (libraryPin) observer.observe(libraryPin);
-  if (featuresIconsSvg)
-    featuresIconsSvg.forEach(featuresIconSvg =>
-      observer.observe(featuresIconSvg)
-    );
-  if (faqIcons) faqIcons.forEach(faqIcon => observer.observe(faqIcon));
-
-  elements.forEach(el => observer.observe(el));
+  elementsToObserve.forEach(el => observer.observe(el));
 });

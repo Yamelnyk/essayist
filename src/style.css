@@ -2335,7 +2335,8 @@ input {
 .picture-container,
 .reference-type-img,
 .reference-img-wrapper-big,
-.reference-letter-wrapper {
+.reference-letter-wrapper,
+.pricing-item-flex {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out 0.2s forwards;
@@ -2601,7 +2602,8 @@ input {
 .reviews-section-container,
 .pricing-section-container,
 .faq-section-container,
-.subscribe-section-container {
+.subscribe-section-container,
+.footer-container {
   position: relative;
 }
 
@@ -2609,7 +2611,8 @@ input {
 .reviews-ico-box,
 .pricing-ico-box,
 .faq-svg-box,
-.subscribe-svg-box {
+.subscribe-svg-bo,
+.footer-svg-box {
   pointer-events: none;
   position: absolute;
   height: 100%;
@@ -2647,7 +2650,7 @@ input {
 }
 
 .features-ico-2 {
-  top: 8%;
+  top: 9%;
   left: 7%;
 }
 
@@ -2844,11 +2847,50 @@ input {
 
 @media screen and (min-width: 768px) {
   .subscribe-ico-1 {
-    right: 60%;
+    right: 55%;
     top: 25%;
   }
   .subscribe-ico-2 {
     right: 10%;
     bottom: 70%;
+  }
+}
+
+.footer-svg-box {
+  top: 0;
+}
+
+.footer-ico {
+  position: absolute;
+  left: 75%;
+  top: 22%;
+}
+
+.footer-ico-1 {
+  left: 70%;
+  bottom: 32%;
+  fill: rgba(205, 207, 208, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .footer-ico {
+    left: 50%;
+  }
+
+  .footer-ico-1 {
+    left: 50%;
+    bottom: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-ico {
+    left: 35%;
+    top: 45%;
+    transform: scale(-1, 1);
+  }
+  .footer-ico-1 {
+    left: 70%;
+    bottom: 40%;
   }
 }
