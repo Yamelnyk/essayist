@@ -158,6 +158,8 @@ document.querySelectorAll('.introduction-item-btn').forEach(button => {
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('.subscribe-form');
   const container = document.querySelector('.subscribe-section-container');
+  const returnContainer = document.querySelector('.return-section-container');
+  const backBtn = document.querySelector('.back-btn');
 
   form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -165,27 +167,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const emailInput = document.querySelector('.email-area-input');
     const emailValue = emailInput.value.trim();
 
-    if (!emailValue) return;
+    if (!emailValue) {
+      return;
+    } else {
+      container.classList.toggle('hidden');
+      returnContainer.classList.toggle('hidden');
+    }
+    emailInput.value = '';
+  });
 
-    container.innerHTML = `
-        <h2 class="subscribe-title section-title">
-          Great! <br />
-          Thank you!
-        </h2>
-        <div class="subscribe-form">
-          <p class="subscribed-text">
-            You have successfully subscribed to the latest updates and news
-            from our app and be the first to know about all the news.
-          </p>
-          <button class="subscribe-button back-btn" type="button">
-            Back
-          </button>
-        </div>
-      `;
+  backBtn.addEventListener('click', e => {
+    e.preventDefault();
 
-    document.querySelector('.back-btn').addEventListener('click', function () {
-      location.reload();
-    });
+    returnContainer.classList.toggle('hidden');
+    container.classList.toggle('hidden');
   });
 });
 /* ------------- OBSERVER SECTIONS ----------- */
