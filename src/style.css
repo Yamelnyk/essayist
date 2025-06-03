@@ -2056,7 +2056,7 @@ input {
 .footer-link-col {
   display: flex;
   flex-direction: row;
-  gap: 25%;
+  gap: 10%;
 }
 
 .footer-link-info {
@@ -2105,6 +2105,10 @@ input {
   .footer-title {
     font-size: 20px;
   }
+
+  .footer-link-col {
+    gap: 40%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .footer-container {
@@ -2138,15 +2142,11 @@ input {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .introduction-section-container {
     position: relative;
   }
   .introduction-ico-box {
-    /* transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    opacity: 1;
-    transform-style: preserve-3d; */
     pointer-events: none;
     position: absolute;
     height: 100%;
