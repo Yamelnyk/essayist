@@ -1,4 +1,10 @@
 /* ============== COMMON STYLES ============== */
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 h1,
 h2,
 h3,
@@ -33,9 +39,6 @@ button {
   list-style-type: none;
 }
 
-html {
-  font-size: 16px;
-}
 a {
   text-decoration: none;
   color: #2e2f42;
